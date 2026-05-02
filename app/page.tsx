@@ -1,65 +1,409 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  Package, ArrowLeftRight, Truck, ShieldCheck, BarChart3,
+  Globe, Award, Users, TrendingUp, CheckCircle2, ArrowRight,
+  Star, Wheat, Zap, ShoppingCart, Factory, Ship, Building2,
+  Clock, HeartHandshake, Target, Lightbulb
+} from "lucide-react";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Global Trade & Logistics Solutions",
+  description:
+    "YAT Business Group connects businesses to global markets with expert import, export, freight, compliance, and consulting services across 40+ countries.",
+  alternates: { canonical: "https://www.yatbusinessgroup.com" },
+};
+
+const stats = [
+  { value: "40", suffix: "+", label: "Countries Served", icon: Globe },
+  { value: "15", suffix: "+", label: "Years of Excellence", icon: Award },
+  { value: "$2.8", suffix: "B", label: "Annual Trade Volume", icon: TrendingUp },
+  { value: "1,200", suffix: "+", label: "Active Partners", icon: Users },
+];
+
+const services = [
+  {
+    href: "/services/import",
+    icon: Package,
+    title: "Import Services",
+    desc: "End-to-end import management — from supplier sourcing and purchase orders to customs clearance and last-mile delivery.",
+    highlights: ["HS code classification", "Customs clearance", "Supplier vetting"],
+  },
+  {
+    href: "/services/export",
+    icon: ArrowLeftRight,
+    title: "Export Services",
+    desc: "Navigate global export regulations with confidence. We handle documentation, compliance, packaging standards, and destination market requirements.",
+    highlights: ["Export documentation", "Market access", "Labelling compliance"],
+  },
+  {
+    href: "/services/logistics",
+    icon: Truck,
+    title: "Freight & Logistics",
+    desc: "Multimodal freight forwarding by sea, air, and land with real-time tracking, warehousing, and last-mile logistics.",
+    highlights: ["Sea, air & road freight", "Real-time tracking", "Warehousing"],
+  },
+  {
+    href: "/services/compliance",
+    icon: ShieldCheck,
+    title: "Trade Compliance",
+    desc: "Stay compliant with international trade regulations. Our specialists manage sanctions screening, tariff classifications, and audit-ready documentation.",
+    highlights: ["Sanctions screening", "Tariff management", "Audit support"],
+  },
+  {
+    href: "/services/consulting",
+    icon: BarChart3,
+    title: "Consulting & Advisory",
+    desc: "Strategic guidance to optimize your supply chain, reduce trade costs, identify new markets, and strengthen your global trade posture.",
+    highlights: ["Market entry strategy", "Cost optimization", "Risk assessment"],
+  },
+];
+
+const differentiators = [
+  {
+    icon: Globe,
+    title: "Truly Global Reach",
+    desc: "Deep local expertise in 40+ countries with on-ground agents, regulatory knowledge, and established partner networks.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Compliance-First Approach",
+    desc: "Every transaction is handled with strict regulatory compliance — from sanctions screening to certificate of origin management.",
+  },
+  {
+    icon: Clock,
+    title: "End-to-End Ownership",
+    desc: "One point of contact for the entire trade lifecycle. No handoffs, no gaps, no surprises in your supply chain.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Long-Term Partnership",
+    desc: "We grow with you. Our dedicated account managers are invested in your business outcomes, not just individual transactions.",
+  },
+  {
+    icon: Target,
+    title: "Sector Specialisation",
+    desc: "Deep expertise across Agriculture, Energy, FMCG, Manufacturing, and more — with tailored solutions for each vertical.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Data-Driven Insights",
+    desc: "Real-time trade analytics, market intelligence reports, and predictive logistics data to keep you ahead of disruptions.",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "YAT Business Group transformed our import operations. Their compliance expertise saved us from a costly customs dispute and reduced our clearance time by 40%.",
+    name: "Sarah Mitchell",
+    title: "VP Supply Chain",
+    company: "Meridian Foods Ltd.",
+    country: "United Kingdom",
+    rating: 5,
+  },
+  {
+    quote: "We expanded into three new African markets in one year with YAT's guidance. Their ground-level network and documentation support was exceptional.",
+    name: "Ahmed Al-Rashidi",
+    title: "CEO",
+    company: "Gulf Trading Corp.",
+    country: "UAE",
+    rating: 5,
+  },
+  {
+    quote: "Their logistics team handled our most complex multi-modal shipment — across 4 countries — with zero delays. Outstanding professionals.",
+    name: "Li Wei",
+    title: "Director of Operations",
+    company: "Sino-Pacific Manufacturing",
+    country: "Singapore",
+    rating: 5,
+  },
+];
+
+const industries = [
+  { href: "/industries#agriculture", icon: Wheat, label: "Agriculture" },
+  { href: "/industries#energy", icon: Zap, label: "Energy" },
+  { href: "/industries#fmcg", icon: ShoppingCart, label: "FMCG" },
+  { href: "/industries#manufacturing", icon: Factory, label: "Manufacturing" },
+  { href: "/industries#shipping", icon: Ship, label: "Shipping" },
+  { href: "/industries#construction", icon: Building2, label: "Construction" },
+];
+
+const partners = ["ISO 9001", "FIATA", "WCO Member", "IATA Certified", "UN Global Compact"];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* ── Hero ── */}
+      <section
+        className="relative min-h-[100svh] flex items-center overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #091E42 0%, #172B4D 45%, #0747A6 75%, #0052CC 100%)",
+        }}
+        aria-label="Hero section"
+      >
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+        {/* Glow orbs */}
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none" style={{ background: "radial-gradient(circle, #00C7E6 0%, transparent 70%)" }} />
+        <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] rounded-full opacity-10 pointer-events-none" style={{ background: "radial-gradient(circle, #4C9AFF 0%, transparent 70%)" }} />
+
+        <div className="container-site relative z-10 pt-28 pb-20">
+          <div className="max-w-4xl">
+            {/* Trust badge row */}
+            <div className="flex flex-wrap gap-3 mb-8 animate-fade-up">
+              {partners.map((p) => (
+                <span key={p} className="trust-badge">
+                  <CheckCircle2 size={12} className="text-[#00C7E6]" />
+                  {p}
+                </span>
+              ))}
+            </div>
+
+            <h1 className="font-display font-extrabold text-white mb-6 animate-fade-up-delay-1"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Connecting Markets.{" "}
+              <span className="gradient-text-light">Moving Goods.</span>
+              <br />Growing Business.
+            </h1>
+
+            <p className="text-white/70 mb-8 max-w-xl animate-fade-up-delay-2" style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: "1.7" }}>
+              YAT Business Group delivers end-to-end trade solutions across 40+ countries — from import sourcing and export compliance to multimodal freight and strategic consulting.
+            </p>
+
+            <div className="flex flex-wrap gap-4 animate-fade-up-delay-3">
+              <Link href="/contact" className="btn btn-white btn-primary-lg text-base">
+                Request a Quote
+                <ArrowRight size={16} />
+              </Link>
+              <Link href="/services" className="btn btn-ghost-white btn-primary-lg text-base">
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
+          <span className="text-white/30 text-xs font-medium tracking-widest uppercase">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
+        </div>
+      </section>
+
+      {/* ── Stats Strip ── */}
+      <section className="bg-[#091E42]" aria-label="Key statistics">
+        <div className="container-site">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+            {stats.map((s, i) => (
+              <div key={s.label} className="flex flex-col items-center text-center py-10 px-6" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="w-10 h-10 rounded-[8px] bg-white/8 flex items-center justify-center mb-3">
+                  <s.icon size={20} className="text-[#00C7E6]" />
+                </div>
+                <p className="stat-number">
+                  {s.value}<span className="stat-suffix">{s.suffix}</span>
+                </p>
+                <p className="text-white/55 text-sm font-medium mt-2">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Services Overview ── */}
+      <section className="section-py bg-[#F4F5F7]" aria-labelledby="services-heading">
+        <div className="container-site">
+          <div className="text-center mb-14">
+            <span className="section-label mb-4">What We Do</span>
+            <h2 id="services-heading" className="font-display font-bold text-[#091E42] mt-4"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Comprehensive Trade Solutions
+            </h2>
+            <p className="text-[#42526E] mt-4 max-w-2xl mx-auto text-lg">
+              From a single import shipment to a full-scale global trade strategy — we handle every stage of your international trade operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <Link key={s.href} href={s.href} className="service-card group">
+                <div className="service-card-icon">
+                  <s.icon size={24} />
+                </div>
+                <h3 className="font-display font-bold text-[#091E42] text-xl mb-2">{s.title}</h3>
+                <p className="text-[#42526E] text-sm leading-relaxed mb-5 flex-1">{s.desc}</p>
+                <ul className="flex flex-col gap-1.5 mb-5">
+                  {s.highlights.map((h) => (
+                    <li key={h} className="flex items-center gap-2 text-sm text-[#344563]">
+                      <CheckCircle2 size={14} className="text-[#00875A] flex-shrink-0" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center gap-1.5 text-sm font-semibold text-[#0052CC] group-hover:gap-2.5 transition-all mt-auto">
+                  Learn more <ArrowRight size={14} />
+                </div>
+              </Link>
+            ))}
+
+            {/* View all card */}
+            <div className="service-card items-center justify-center text-center gap-4 border-dashed !border-2 !border-[#C1C7D0] !shadow-none bg-transparent hover:!bg-white hover:!border-[#4C9AFF]">
+              <div className="w-14 h-14 rounded-full border-2 border-dashed border-[#C1C7D0] flex items-center justify-center text-[#97A0AF] mb-2">
+                <ArrowRight size={22} />
+              </div>
+              <p className="font-semibold text-[#344563] text-lg">View All Services</p>
+              <p className="text-sm text-[#6B778C]">Explore our full catalogue of trade solutions</p>
+              <Link href="/services" className="btn btn-primary mt-2 text-sm">
+                View All
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ── Why Choose Us ── */}
+      <section className="section-py bg-white" aria-labelledby="differentiators-heading">
+        <div className="container-site">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="section-label mb-4">Why YAT</span>
+              <h2 id="differentiators-heading" className="font-display font-bold text-[#091E42] mt-4 mb-5"
+                style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
+              >
+                The YAT Difference — Built on Trust, Expertise & Results
+              </h2>
+              <p className="text-[#42526E] text-lg leading-relaxed mb-8">
+                We don&#39;t just move goods. We build trade relationships, navigate regulatory complexity, and deliver measurable outcomes for your business — every time.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/about" className="btn btn-primary">
+                  Our Story
+                </Link>
+                <Link href="/contact" className="btn btn-secondary">
+                  Talk to an Expert
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {differentiators.map((d) => (
+                <div key={d.title} className="diff-item">
+                  <div className="diff-icon-wrap flex-shrink-0">
+                    <d.icon size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#172B4D] text-sm mb-1">{d.title}</h3>
+                    <p className="text-[#6B778C] text-xs leading-relaxed">{d.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ── Testimonials ── */}
+      <section className="section-py bg-[#F4F5F7]" aria-labelledby="testimonials-heading">
+        <div className="container-site">
+          <div className="text-center mb-14">
+            <span className="section-label mb-4">Client Stories</span>
+            <h2 id="testimonials-heading" className="font-display font-bold text-[#091E42] mt-4"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+            >
+              Trusted by Industry Leaders
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div key={t.name} className="testimonial-card">
+                <div className="flex gap-0.5 mb-4">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <Star key={i} size={14} fill="#FF8B00" stroke="none" />
+                  ))}
+                </div>
+                <p className="text-[#344563] text-sm leading-relaxed mb-6 relative z-10">{t.quote}</p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 rounded-full bg-[#DEEBFF] flex items-center justify-center font-bold text-[#0052CC] font-display text-sm flex-shrink-0">
+                    {t.name.split(" ").map((n) => n[0]).join("")}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#172B4D] text-sm">{t.name}</p>
+                    <p className="text-xs text-[#6B778C]">{t.title} · {t.company}</p>
+                    <p className="text-xs text-[#97A0AF]">{t.country}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Featured Industries ── */}
+      <section className="section-py bg-white" aria-labelledby="industries-heading">
+        <div className="container-site">
+          <div className="text-center mb-12">
+            <span className="section-label mb-4">Sectors We Serve</span>
+            <h2 id="industries-heading" className="font-display font-bold text-[#091E42] mt-4"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+            >
+              Deep Expertise Across Industries
+            </h2>
+            <p className="text-[#42526E] mt-4 max-w-xl mx-auto">
+              From agricultural commodities to industrial energy — we understand the specific compliance, logistics, and market access requirements of your sector.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+            {industries.map((ind) => (
+              <Link key={ind.href} href={ind.href} className="industry-tile">
+                <ind.icon size={28} className="industry-icon" />
+                <span className="industry-label">{ind.label}</span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/industries" className="btn btn-secondary">
+              View All Industries <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Banner ── */}
+      <section className="section-py-sm bg-[#F4F5F7]" aria-label="Call to action">
+        <div className="container-site">
+          <div className="cta-banner text-center">
+            <div className="relative z-10">
+              <span className="section-label section-label-light mb-5">Start Today</span>
+              <h2 className="font-display font-bold text-white mt-4 mb-4"
+                style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
+              >
+                Ready to Expand Your Trade Reach?
+              </h2>
+              <p className="text-white/65 mb-8 max-w-xl mx-auto text-lg">
+                Speak with a trade specialist today. No commitment — just expert guidance on how to grow your international business.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="btn btn-white btn-primary-lg">
+                  Request a Free Consultation
+                  <ArrowRight size={16} />
+                </Link>
+                <Link href="/contact#rfq" className="btn btn-ghost-white btn-primary-lg">
+                  Get a Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
