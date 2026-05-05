@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Global Trade & Logistics Solutions",
+  title: "YAT - Global Trade & Logistics Solutions",
   description:
     "YAT Business Group connects businesses to global markets with expert import, export, freight, compliance, and consulting services across 40+ countries.",
   alternates: { canonical: "https://www.yatbusinessgroup.com" },

@@ -55,31 +55,28 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_2px_16px_rgba(9,30,66,0.12)] border-b border-[#DFE1E6]"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_16px_rgba(9,30,66,0.12)] border-b border-[#DFE1E6]"
+          : "bg-transparent"
+          }`}
         role="banner"
       >
         <div className="container-site">
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="YAT Business Group — Home">
-              <div className={`w-9 h-9 rounded-[6px] flex items-center justify-center font-bold text-lg font-display transition-colors ${
-                scrolled ? "bg-[#0052CC] text-white" : "bg-white text-[#0052CC]"
-              }`}>
-                Y
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className={`font-bold text-[1.0625rem] tracking-[-0.01em] font-display transition-colors ${
-                  scrolled ? "text-[#091E42]" : "text-white"
+              <div className={`w-14 h-14 rounded-[6px] flex items-center justify-center font-bold text-lg font-display transition-colors ${scrolled ? "bg-[#0052CC] text-white" : "bg-white text-[#0052CC]"
                 }`}>
+                <img src="/yatm-logo.png" alt="Logo" width={32} height={32} />
+              </div>
+              {/* <img src="/yatm-logo.png" alt="Logo" width={32} height={32} /> */}
+              <div className="flex flex-col leading-none">
+                <span className={`font-bold text-[1.0625rem] tracking-[-0.01em] font-display transition-colors ${scrolled ? "text-[#091E42]" : "text-white"
+                  }`}>
                   YAT Business Group
                 </span>
-                <span className={`text-[0.6875rem] font-medium tracking-[0.06em] uppercase transition-colors ${
-                  scrolled ? "text-[#6B778C]" : "text-white/60"
-                }`}>
+                <span className={`text-[0.6875rem] font-medium tracking-[0.06em] uppercase transition-colors ${scrolled ? "text-[#6B778C]" : "text-white/60"
+                  }`}>
                   Global Trade Partners
                 </span>
               </div>
@@ -93,11 +90,10 @@ export default function Header() {
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
                       onMouseEnter={() => setServicesOpen(true)}
-                      className={`flex items-center gap-1 px-3.5 py-2 rounded-[4px] text-sm font-semibold transition-all ${
-                        scrolled
-                          ? "text-[#253858] hover:text-[#0052CC] hover:bg-[#F4F5F7]"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                      }`}
+                      className={`flex items-center gap-1 px-3.5 py-2 rounded-[4px] text-sm font-semibold transition-all ${scrolled
+                        ? "text-[#253858] hover:text-[#0052CC] hover:bg-[#F4F5F7]"
+                        : "text-white/90 hover:text-white hover:bg-white/10"
+                        }`}
                       aria-expanded={servicesOpen}
                       aria-haspopup="true"
                     >
@@ -145,11 +141,10 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`px-3.5 py-2 rounded-[4px] text-sm font-semibold transition-all ${
-                      scrolled
-                        ? "text-[#253858] hover:text-[#0052CC] hover:bg-[#F4F5F7]"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
-                    }`}
+                    className={`px-3.5 py-2 rounded-[4px] text-sm font-semibold transition-all ${scrolled
+                      ? "text-[#253858] hover:text-[#0052CC] hover:bg-[#F4F5F7]"
+                      : "text-white/90 hover:text-white hover:bg-white/10"
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -161,9 +156,8 @@ export default function Header() {
             <div className="flex items-center gap-3">
               <Link
                 href="tel:+1234567890"
-                className={`hidden xl:flex items-center gap-2 text-sm font-semibold transition-colors ${
-                  scrolled ? "text-[#253858] hover:text-[#0052CC]" : "text-white/80 hover:text-white"
-                }`}
+                className={`hidden xl:flex items-center gap-2 text-sm font-semibold transition-colors ${scrolled ? "text-[#253858] hover:text-[#0052CC]" : "text-white/80 hover:text-white"
+                  }`}
                 aria-label="Call us"
               >
                 <Phone size={15} />
@@ -176,9 +170,8 @@ export default function Header() {
 
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className={`lg:hidden p-2 rounded-[4px] transition-colors ${
-                  scrolled ? "text-[#253858] hover:bg-[#F4F5F7]" : "text-white hover:bg-white/10"
-                }`}
+                className={`lg:hidden p-2 rounded-[4px] transition-colors ${scrolled ? "text-[#253858] hover:bg-[#F4F5F7]" : "text-white hover:bg-white/10"
+                  }`}
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
                 aria-expanded={mobileOpen}
               >

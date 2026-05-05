@@ -18,8 +18,8 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const SITE_URL = "https://www.yatbusinessgroup.com";
-const SITE_NAME = "YAT Business Group";
+const SITE_URL = "https://www.yat-m.com";
+const SITE_NAME = "YAT";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
