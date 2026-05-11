@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "40", suffix: "+", label: "Countries Served", icon: Globe },
-  { value: "15", suffix: "+", label: "Years of Excellence", icon: Award },
-  { value: "$2.8", suffix: "B", label: "Annual Trade Volume", icon: TrendingUp },
-  { value: "1,200", suffix: "+", label: "Active Partners", icon: Users },
+  { value: "4", suffix: "+", label: "Countries Served", icon: Globe },
+  { value: "7", suffix: "+", label: "Years of Excellence", icon: Award },
+  { value: "$3.2", suffix: "M", label: "Export Projection", icon: TrendingUp },
+  { value: "200", suffix: "Ha", label: "Plantation Capacity", icon: Users },
 ];
 
 const services = [
