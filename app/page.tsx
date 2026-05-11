@@ -126,7 +126,6 @@ const industries = [
   { href: "/industries#fmcg", icon: ShoppingCart, label: "FMCG" },
   { href: "/industries#manufacturing", icon: Factory, label: "Manufacturing" },
   { href: "/industries#shipping", icon: Ship, label: "Shipping" },
-  { href: "/industries#construction", icon: Building2, label: "Construction" },
 ];
 
 const partners = ["ISO 9001", "Volza", "Global Suppliers", "CTC Certified"];
@@ -373,7 +372,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
             {industries.map((ind) => (
               <Link key={ind.href} href={ind.href} className="industry-tile">
                 <ind.icon size={28} className="industry-icon" />
@@ -397,7 +396,7 @@ export default function HomePage() {
             <div className="relative z-10">
               <span className="section-label section-label-light mb-5">Start Today</span>
               <h2 className="font-display font-bold text-white mt-4 mb-4"
-                style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}
+                style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)", color: "#fff" }}
               >
                 Ready to Expand Your Trade Reach?
               </h2>
