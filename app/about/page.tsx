@@ -2,81 +2,82 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   CheckCircle2, Award, Globe, Users, Target, Heart,
-  TrendingUp, ShieldCheck, Lightbulb, ArrowRight
+  TrendingUp, ShieldCheck, Lightbulb, ArrowRight,
+  Handshake
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/SocialIcons";
+import MapContainer from "@/components/MapContainer";
+
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about YAT Business Group — our founding story, mission, leadership team, certifications, and 15+ years of global trade expertise across 40+ countries.",
+    "Learn about YAT Business Group — our founding story, mission, leadership team, certifications, and 7+ years of global trade expertise across the globe.",
   alternates: { canonical: "https://www.yatbusinessgroup.com/about" },
   openGraph: {
     title: "About YAT Business Group | Global Trade Experts Since 2008",
-    description: "15+ years of excellence in international trade, import, export, and logistics across 40+ countries.",
+    description: "7+ years of excellence in international trade, import, export, manufacturing, compliance, consulting and logistics across the globe.",
   },
 };
 
 const timeline = [
-  { year: "2008", title: "Founded in New York", desc: "YAT Business Group established as a boutique trade consultancy serving North American importers." },
-  { year: "2011", title: "First International Expansion", desc: "Opened regional office in Dubai, UAE, gaining direct access to Middle Eastern and African trade corridors." },
-  { year: "2014", title: "ISO 9001 Certification", desc: "Achieved ISO 9001:2015 quality management certification — a milestone in our commitment to process excellence." },
-  { year: "2016", title: "FIATA Membership", desc: "Joined the International Federation of Freight Forwarders Associations, strengthening our global network." },
-  { year: "2019", title: "Asia-Pacific Office", desc: "Established Singapore hub to serve clients across Southeast Asia, China, and the broader Asia-Pacific region." },
-  { year: "2022", title: "$2B+ Annual Trade Volume", desc: "Crossed $2 billion in annual trade facilitated — a testament to our growing client base and operational scale." },
-  { year: "2024", title: "40+ Countries Milestone", desc: "Expanded active operations to over 40 countries with 1,200+ partners across all major trade regions." },
+  { year: "2019", title: "Company Foundation", desc: "YAT Manufacturing P.L.C. was established as a manufacturer of plastic products with a mission to support industrial growth and quality production in Ethiopia." },
+  { year: "2020", title: "Expansion Into International Trade", desc: "The company expanded into import and export operations, building partnerships with international suppliers, buyers, and forwarding companies." },
+  { year: "2021", title: "Logistics & Forwarding Services", desc: "YAT introduced shipping, freight forwarding, customs clearing, and transportation solutions to provide end-to-end trade support." },
+  { year: "2022", title: "Agricultural Export Growth", desc: "The company strengthened its export operations by supplying Ethiopian coffee, sesame, oil seeds, and pulses to international markets." },
+  { year: "2023", title: "Industrial Machinery & Factory Solutions", desc: "YAT expanded into industrial machine supply, factory design, installation support, and manufacturing consultancy services." },
+  { year: "2024", title: "Business Consultancy & Training", desc: "The company began providing operational training and international business consultancy to support sustainable growth for businesses and employees." },
+  { year: "Today", title: "Building Global Trade Connections", desc: "YAT continues to grow as a trusted manufacturing, logistics, and international trade partner focused on quality, precision, innovation, and long-term business relationships." },
 ];
 
 const values = [
-  { icon: ShieldCheck, title: "Integrity", desc: "We operate with complete transparency. Every decision is guided by ethical conduct and fiduciary responsibility to our clients." },
-  { icon: Target, title: "Precision", desc: "Trade demands accuracy. From HS code classification to customs documentation, we leave no detail unchecked." },
-  { icon: Globe, title: "Global Thinking", desc: "We bring a genuinely global perspective — understanding the cultural, regulatory, and market nuances of every region we serve." },
-  { icon: Heart, title: "Partnership", desc: "We are invested in your success, not just the transaction. Long-term relationships are the foundation of our business." },
-  { icon: Lightbulb, title: "Innovation", desc: "We continuously invest in technology and processes to deliver smarter, faster, and more cost-effective trade solutions." },
+  { icon: ShieldCheck, title: "Integrity", desc: "We conduct every partnership and operation with honesty, transparency, and professionalism." },
+  { icon: Target, title: "Excellence", desc: "We are committed to delivering high-quality services and reliable results that exceed client expectations." },
+  { icon: Lightbulb, title: "Creativity", desc: "We embrace innovation and practical thinking to create effective solutions for modern business challenges." },
+  { icon: Heart, title: "Teamwork", desc: "We believe strong collaboration and shared expertise are essential for achieving sustainable success." },
+  { icon: Handshake, title: "Accountability", desc: "We take responsibility for our actions, decisions, and commitments to ensure trust and consistency." },
 ];
 
 const leadership = [
   {
-    name: "Jonathan A. Yates",
-    title: "Founder & CEO",
-    bio: "30+ years in international trade and supply chain. Former SVP at a Fortune 500 logistics firm. Speaks at global trade conferences and is a WCO advisory panel member.",
-    initials: "JY",
+    name: "Tagel Melkamu",
+    title: "General Manager",
+    bio: "General Manager of YAT Manufacturing P.L.C. with an academic background in Mathematics and Economics. He leads the company’s strategic direction, overseeing operations, and international trade activities",
+    initials: "TM",
   },
   {
-    name: "Amira Hassan",
-    title: "COO — MENA & Africa",
-    bio: "15 years managing trade operations across the Middle East and African continent. Expert in emerging market compliance, customs facilitation, and corridor development.",
-    initials: "AH",
+    name: "Amhaslsie Melkamu",
+    title: "Marketing Manager",
+    bio: "Marketing Manager with expertise in Economics and International Trade. He plays a key role in building international business relationships, and market expansion strategies",
+    initials: "AM",
   },
   {
-    name: "David Chen",
-    title: "Managing Director, Asia-Pacific",
-    bio: "Based in Singapore with deep expertise in Asian trade corridors, ASEAN regulations, and cross-border e-commerce logistics. MBA from NUS.",
-    initials: "DC",
+    name: "Yared Melkamu",
+    title: "Marketing Officer",
+    bio: "Marketing Officer with a background in Computer Science, contributing to marketing operations, business communication, and digital support initiatives.",
+    initials: "YM",
   },
   {
-    name: "Elena Vasquez",
-    title: "Chief Compliance Officer",
-    bio: "Former customs attorney with 18 years specializing in trade law, sanctions compliance, and WTO regulations. Licensed customs broker in 6 jurisdictions.",
-    initials: "EV",
+    name: "Jingsong Liu",
+    title: "YAT Agent at Djibouti",
+    bio: "YAT’s representative in Djibouti, supporting international logistics coordination, shipping operations, and cross-border trade activities.",
+    initials: "JL",
   },
 ];
 
 const certifications = [
-  { name: "ISO 9001:2015", desc: "Quality Management Systems", color: "#0052CC" },
-  { name: "FIATA Member", desc: "International Federation of Freight Forwarders", color: "#00875A" },
-  { name: "WCO Accredited", desc: "World Customs Organization", color: "#0747A6" },
-  { name: "IATA Certified", desc: "Air Cargo Handling & Dangerous Goods", color: "#FF8B00" },
-  { name: "AEO Status", desc: "Authorized Economic Operator — EU & UK", color: "#00B8D9" },
-  { name: "UN Global Compact", desc: "Sustainable Trade Signatory", color: "#00875A" },
+  { name: "Coffee Training Center Ethiopia", desc: "Basic Coffee Training, Quality Inspection of Raw Coffee, and Roasting & Liquoring", color: "#0052CC" },
+  { name: "Certificate of Appreciation", desc: "Timely supply of various types of distribution transformers to Amhara Regional State Electirc Utility", color: "#00875A" },
+  // { name: "WCO Accredited", desc: "World Customs Organization", color: "#0747A6" },
+  // { name: "IATA Certified", desc: "Air Cargo Handling & Dangerous Goods", color: "#FF8B00" },
+  // { name: "AEO Status", desc: "Authorized Economic Operator — EU & UK", color: "#00B8D9" },
+  // { name: "UN Global Compact", desc: "Sustainable Trade Signatory", color: "#00875A" },
 ];
 
 const regions = [
-  { name: "North America", detail: "HQ + 3 agent offices" },
-  { name: "Europe", detail: "6 active trade corridors" },
-  { name: "Middle East & Africa", detail: "Dubai hub + 12 countries" },
-  { name: "Asia-Pacific", detail: "Singapore hub + 8 countries" },
-  { name: "Latin America", detail: "4 emerging markets" },
+  { name: "Africa", detail: "2 active trade corridors" },
+  { name: "Middle East", detail: "Dubai hub + 4 countries" },
+  { name: "Asia-Pacific", detail: "China hub + 3 countries" },
 ];
 
 export default function AboutPage() {
@@ -92,12 +93,12 @@ export default function AboutPage() {
           </nav>
           <span className="section-label section-label-light mb-4">Our Story</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#ffffff" }}
           >
-            Pioneering Global Trade<br />Since 2008
+            Pioneering Global Trade<br />Since 2019
           </h1>
           <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
-            YAT Business Group was built on a simple conviction: businesses of every size deserve expert, transparent, and results-driven trade support. We've spent 15+ years turning that conviction into a proven global operation.
+            YAT Business Group was built on a simple conviction: businesses of every size deserve expert, transparent, and results-driven trade support. We've spent 7+ years turning that conviction into a proven global operation.
           </p>
         </div>
       </div>
@@ -111,17 +112,20 @@ export default function AboutPage() {
               <h2 id="story-heading" className="font-display font-bold text-[#091E42] mt-4 mb-6"
                 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
               >
-                From a Boutique Consultancy to a Global Trade Powerhouse
+                The Road to Global Trade Powerhouse
               </h2>
               <div className="flex flex-col gap-5 text-[#344563] leading-relaxed">
-                <p>
-                  YAT Business Group was founded in New York in 2008 by Jonathan A. Yates, a seasoned trade executive who recognized a fundamental gap: small and mid-size businesses were navigating complex international trade regulations without adequate support, losing millions to customs delays, compliance failures, and missed market opportunities.
+                <p className="text-justify">
+                  YAT Manufacturing P.L.C. was established in 2019 with a vision to build stronger connections between local industries and global opportunities. What began as a plastic manufacturing company has steadily grown into a diversified business operating across manufacturing, import and export trade, logistics, forwarding services, and international business consultancy.
                 </p>
-                <p>
-                  What began as a consultancy serving a handful of North American importers quickly evolved. As our client roster grew, so did our capabilities. By 2011 we had opened our first international office in Dubai — a strategic gateway to the Middle East and African markets. By 2019 we extended our reach into Asia-Pacific with a Singapore hub.
+                <p className="text-justify">
+                  Driven by a commitment to quality, reliability, and innovation, YAT works closely with international suppliers, buyers, shipping companies, and logistics partners to deliver complete business solutions for clients in Ethiopia and beyond. Over the years, the company has expanded its expertise into exporting Ethiopian agricultural products such as coffee, sesame, oil seeds, and pulses while also supporting businesses with industrial machinery imports, customs clearing, transportation, and operational guidance.
                 </p>
-                <p>
-                  Today, YAT Business Group facilitates over $2.8 billion in annual trade volume across 40+ countries. We serve multinational corporations, growing mid-market companies, and emerging enterprises — all with the same commitment to precision, compliance, and partnership.
+                <p className="text-justify">
+                  At YAT, we believe business is not only about transactions — it is about creating long-term value, empowering industries, and building trusted partnerships. Our team combines technical expertise, international trade knowledge, and practical operational experience to help clients navigate complex markets with confidence.
+                </p>
+                <p className="text-justify">
+                  Today, YAT continues to grow with a clear mission: to contribute to the industrialization, logistics, and trade sectors of Ethiopia while connecting businesses to opportunities across the global market.
                 </p>
               </div>
             </div>
@@ -167,7 +171,8 @@ export default function AboutPage() {
               </div>
               <h3 className="font-display font-bold text-[#091E42] text-xl mb-3">Our Mission</h3>
               <p className="text-[#344563] leading-relaxed">
-                To empower businesses worldwide with reliable, transparent, and expert trade solutions that open markets, reduce complexity, and create measurable growth — regardless of company size or sector.
+                Creating endless possibilities to the Manufacturing, logistics and service sector of
+                Ethiopia and beyond.
               </p>
             </div>
             <div className="card p-8">
@@ -176,7 +181,8 @@ export default function AboutPage() {
               </div>
               <h3 className="font-display font-bold text-[#091E42] text-xl mb-3">Our Vision</h3>
               <p className="text-[#344563] leading-relaxed">
-                To be the world&#39;s most trusted trade partner — a company where any business, anywhere, can access global markets with confidence and clarity.
+                To help our people access worldwide logistics services, Industrialized and eco
+                friendly facilities.
               </p>
             </div>
           </div>
@@ -289,32 +295,9 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Decorative world map placeholder */}
+            {/* Real SVG World Map */}
             <div className="relative">
-              <div className="aspect-16/10 rounded-xl bg-linear-to-br from-[#091E42] to-[#172B4D] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0"
-                  style={{
-                    backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-                    backgroundSize: "30px 30px",
-                  }}
-                />
-                {/* Decorative dots for office locations */}
-                {[
-                  { top: "35%", left: "22%", label: "New York" },
-                  { top: "42%", left: "48%", label: "London" },
-                  { top: "48%", left: "57%", label: "Dubai" },
-                  { top: "55%", left: "72%", label: "Singapore" },
-                ].map((dot) => (
-                  <div key={dot.label} className="absolute flex flex-col items-center gap-1" style={{ top: dot.top, left: dot.left }}>
-                    <div className="w-3 h-3 rounded-full bg-[#00C7E6] shadow-[0_0_12px_rgba(0,199,230,0.6)]" />
-                    <span className="text-[9px] text-white/60 font-medium whitespace-nowrap">{dot.label}</span>
-                  </div>
-                ))}
-                <div className="relative z-10 text-center">
-                  <Globe size={48} className="text-white/20 mx-auto mb-3" />
-                  <p className="text-white/40 text-sm font-medium">Interactive map available in<br />Global Network section</p>
-                </div>
-              </div>
+              <MapContainer />
               <div className="mt-4 text-center">
                 <Link href="/network" className="btn btn-secondary text-sm">
                   View Global Network <ArrowRight size={14} />
