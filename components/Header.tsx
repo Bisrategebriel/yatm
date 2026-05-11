@@ -65,11 +65,10 @@ export default function Header() {
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="YAT Business Group — Home">
-              <div className={`w-14 h-14 rounded-[6px] flex items-center justify-center font-bold text-lg font-display transition-colors ${scrolled ? "bg-[#0052CC] text-white" : "bg-white text-[#0052CC]"
+              <div className={`w-14 h-14 rounded-[6px] flex items-center justify-center font-bold text-lg font-display transition-colors ${scrolled ? "bg-[#F1F1F1] text-white" : "bg-white text-[#0052CC]"
                 }`}>
                 <img src="/yatm-logo.png" alt="Logo" width={32} height={32} />
               </div>
-              {/* <img src="/yatm-logo.png" alt="Logo" width={32} height={32} /> */}
               <div className="flex flex-col leading-none">
                 <span className={`font-bold text-[1.0625rem] tracking-[-0.01em] font-display transition-colors ${scrolled ? "text-[#091E42]" : "text-white"
                   }`}>
@@ -155,17 +154,17 @@ export default function Header() {
             {/* CTA + mobile toggle */}
             <div className="flex items-center gap-3">
               <Link
-                href="tel:+1234567890"
+                href="tel:+251911362741"
                 className={`hidden xl:flex items-center gap-2 text-sm font-semibold transition-colors ${scrolled ? "text-[#253858] hover:text-[#0052CC]" : "text-white/80 hover:text-white"
                   }`}
                 aria-label="Call us"
               >
                 <Phone size={15} />
-                <span>+1 (234) 567-890</span>
+                <span>(+251) 911-362-741</span>
               </Link>
 
               <Link href="/contact" className="hidden lg:inline-flex btn btn-primary text-sm px-5 py-2.5">
-                Get a Quote
+                Contact Us
               </Link>
 
               <button
