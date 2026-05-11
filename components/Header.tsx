@@ -163,9 +163,11 @@ export default function Header() {
                 <span>(+251) 911-362-741</span>
               </Link>
 
-              <Link href="/contact" className="hidden lg:inline-flex btn btn-primary text-sm px-5 py-2.5">
-                Contact Us
-              </Link>
+              <div className="hidden lg:flex">
+                <Link href="/contact" className="btn btn-primary text-sm px-5 py-2.5">
+                  Contact Us
+                </Link>
+              </div>
 
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -183,7 +185,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden" aria-modal="true" role="dialog" aria-label="Navigation menu">
+        <div className="fixed inset-0 z-[60] lg:hidden" aria-modal="true" role="dialog" aria-label="Navigation menu">
           <div className="absolute inset-0 bg-[#091E42]/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
           <div className="absolute top-0 right-0 bottom-0 w-[min(320px,90vw)] bg-white shadow-[0_0_48px_rgba(9,30,66,0.25)] flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between px-5 h-[72px] border-b border-[#EBECF0] flex-shrink-0">
@@ -215,11 +217,11 @@ export default function Header() {
             </nav>
 
             <div className="px-4 pb-6 flex flex-col gap-3 border-t border-[#EBECF0] pt-4 flex-shrink-0">
-              <Link href="tel:+1234567890" className="flex items-center gap-2 text-sm font-semibold text-[#253858] px-4 py-2.5">
-                <Phone size={15} className="text-[#0052CC]" /> +1 (234) 567-890
+              <Link href="tel:+251911362741" className="flex items-center gap-2 text-sm font-semibold text-[#253858] px-4 py-2.5">
+                <Phone size={15} className="text-[#0052CC]" /> (+251) 911-362-741
               </Link>
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="btn btn-primary w-full justify-center">
-                Get a Quote
+                Contact Us
               </Link>
             </div>
           </div>

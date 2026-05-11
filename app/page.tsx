@@ -408,7 +408,7 @@ export default function HomePage() {
                   <ArrowRight size={16} />
                 </Link>
                 <Link href="/contact#rfq" className="btn btn-ghost-white btn-primary-lg">
-                  Get a Quote
+                  Contact Us
                 </Link>
               </div>
             </div>
