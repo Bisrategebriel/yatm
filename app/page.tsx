@@ -63,33 +63,33 @@ const services = [
 const differentiators = [
   {
     icon: Globe,
-    title: "Truly Global Reach",
-    desc: "Deep local expertise in 40+ countries with on-ground agents, regulatory knowledge, and established partner networks.",
+    title: "International Trade Network",
+    desc: "Strong partnerships with international buyers, suppliers, and forwarding companies across global markets.",
   },
   {
-    icon: ShieldCheck,
-    title: "Compliance-First Approach",
-    desc: "Every transaction is handled with strict regulatory compliance — from sanctions screening to certificate of origin management.",
+    icon: Truck,
+    title: "End-to-End Logistics Support",
+    desc: "Complete shipping, customs clearing, port handling, and transportation solutions under one trusted partner.",
   },
   {
-    icon: Clock,
-    title: "End-to-End Ownership",
-    desc: "One point of contact for the entire trade lifecycle. No handoffs, no gaps, no surprises in your supply chain.",
+    icon: Factory,
+    title: "Manufacturing Expertise",
+    desc: "Experience in plastic product manufacturing, tyre production, factory systems, and industrial machine solutions.",
   },
   {
-    icon: HeartHandshake,
-    title: "Long-Term Partnership",
-    desc: "We grow with you. Our dedicated account managers are invested in your business outcomes, not just individual transactions.",
+    icon: Wheat,
+    title: "Export Market Access",
+    desc: "Supplying Ethiopian coffee, sesame, oil seeds, and agricultural products to international buyers.",
   },
   {
-    icon: Target,
-    title: "Sector Specialisation",
-    desc: "Deep expertise across Agriculture, Energy, FMCG, Manufacturing, and more — with tailored solutions for each vertical.",
+    icon: BarChart3,
+    title: "Business Consultancy & Training",
+    desc: "Providing operational training and international business consultancy for sustainable business growth.",
   },
   {
     icon: Lightbulb,
-    title: "Data-Driven Insights",
-    desc: "Real-time trade analytics, market intelligence reports, and predictive logistics data to keep you ahead of disruptions.",
+    title: "Quality & Precision Driven",
+    desc: "Every project and service is delivered with professionalism, accuracy, and a commitment to client satisfaction.",
   },
 ];
 
@@ -290,14 +290,16 @@ export default function HomePage() {
                 The YAT Difference — Built on Trust, Expertise & Results
               </h2>
               <p className="text-[#42526E] text-lg leading-relaxed mb-8">
-                We don&#39;t just move goods. We build trade relationships, navigate regulatory complexity, and deliver measurable outcomes for your business — every time.
+                We connect businesses to international markets through trusted manufacturing, import-export, logistics, and business consultancy solutions.
+                <br /><br />
+                From sourcing and forwarding to export operations and industrial support, YAT delivers dependable services with quality, precision, and long-term partnership in mind.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/about" className="btn btn-primary">
                   Our Story
                 </Link>
                 <Link href="/contact" className="btn btn-secondary">
-                  Talk to an Expert
+                  Contact Us
                 </Link>
               </div>
             </div>
