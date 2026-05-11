@@ -111,6 +111,10 @@ export default function Footer() {
                 <Mail size={14} className="text-[#4C9AFF] shrink-0" />
                 info@yat-m.com
               </a>
+              <a href="mailto:yatagro@gmail.com" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
+                <Mail size={14} className="text-[#4C9AFF] shrink-0" />
+                yatagro@gmail.com
+              </a>
               <a href="tel:+251911362741" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
                 <Phone size={14} className="text-[#4C9AFF] shrink-0" />
                 (+251) 911-362-741
