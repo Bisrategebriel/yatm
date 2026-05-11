@@ -28,35 +28,35 @@ const services = [
     icon: Package,
     title: "Import Services",
     desc: "End-to-end import management — from supplier sourcing and purchase orders to customs clearance and last-mile delivery.",
-    highlights: ["HS code classification", "Customs clearance", "Supplier vetting"],
+    highlights: ["Industrial machinery import", "Supplier sourcing & procurement", "Customs clearance", "Port handling & transportation"],
   },
   {
     href: "/services/export",
     icon: ArrowLeftRight,
     title: "Export Services",
-    desc: "Navigate global export regulations with confidence. We handle documentation, compliance, packaging standards, and destination market requirements.",
-    highlights: ["Export documentation", "Market access", "Labelling compliance"],
+    desc: "Expand into international markets with YAT’s export solutions for Ethiopian agricultural products including coffee, sesame, pulses, and oil seeds.",
+    highlights: ["Coffee export", "Sesame & oil seeds export", "International buyer connections", "Export documentation support"],
   },
   {
     href: "/services/logistics",
     icon: Truck,
     title: "Freight & Logistics",
-    desc: "Multimodal freight forwarding by sea, air, and land with real-time tracking, warehousing, and last-mile logistics.",
-    highlights: ["Sea, air & road freight", "Real-time tracking", "Warehousing"],
+    desc: "Reliable shipping, forwarding, and logistics solutions designed to simplify global trade operations for businesses and manufacturers.",
+    highlights: ["Shipping & freight forwarding", "Customs clearing services", "Port logistics coordination", "Inland transportation support"],
   },
   {
-    href: "/services/compliance",
-    icon: ShieldCheck,
-    title: "Trade Compliance",
-    desc: "Stay compliant with international trade regulations. Our specialists manage sanctions screening, tariff classifications, and audit-ready documentation.",
-    highlights: ["Sanctions screening", "Tariff management", "Audit support"],
+    href: "/services/manufacturing",
+    icon: Factory,
+    title: "Manufacturing Solutions",
+    desc: "YAT delivers manufacturing support and industrial product solutions with expertise in plastic products, tyre production, and factory systems.",
+    highlights: ["Plastic product manufacturing", "Tyre manufacturing", "Factory setup & installation", "Industrial machine supply"],
   },
   {
     href: "/services/consulting",
     icon: BarChart3,
     title: "Consulting & Advisory",
-    desc: "Strategic guidance to optimize your supply chain, reduce trade costs, identify new markets, and strengthen your global trade posture.",
-    highlights: ["Market entry strategy", "Cost optimization", "Risk assessment"],
+    desc: "Strategic international business consultancy and operational support to help businesses grow in manufacturing, trade, and logistics sectors.",
+    highlights: ["International trade consultancy", "Operational training", "Logistics strategy support", "Market expansion guidance"],
   },
 ];
 
@@ -269,7 +269,7 @@ export default function HomePage() {
                 <ArrowRight size={22} />
               </div>
               <p className="font-semibold text-[#344563] text-lg">View All Services</p>
-              <p className="text-sm text-[#6B778C]">Explore our full catalogue of trade solutions</p>
+              <p className="text-sm text-[#6B778C]">Explore our full catalogue of business solutions</p>
               <Link href="/services" className="btn btn-primary mt-2 text-sm">
                 View All
               </Link>
