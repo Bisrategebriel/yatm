@@ -14,8 +14,8 @@ const footerLinks = {
     { href: "/services/import", label: "Import Services" },
     { href: "/services/export", label: "Export Services" },
     { href: "/services/logistics", label: "Freight & Logistics" },
-    { href: "/services/compliance", label: "Trade Compliance" },
-    { href: "/services/consulting", label: "Consulting" },
+    { href: "/services/manufacturing", label: "Manufacturing" },
+    { href: "/services/consulting", label: "Consulting & Advisory" },
   ],
   explore: [
     { href: "/industries", label: "Industries" },
@@ -30,9 +30,10 @@ const footerLinks = {
 };
 
 const offices = [
-  { city: "Headquarters", address: "1200 Trade Tower, Financial District, New York, NY 10004, USA" },
-  { city: "Regional Office", address: "Global Trade Centre, Level 12, Dubai, UAE" },
-  { city: "Asia-Pacific", address: "Suite 800, International Plaza, Singapore 068796" },
+  { city: "Addis Ababa", address: "Kirkos Sub-city, Woreda 07, Addis Ababa, Ethiopia" },
+  { city: "Djibouti", address: "Djibouti, Djibouti" },
+  { city: "Dubai", address: "Dubai, UAE" },
+  { city: "China", address: "Xi'an High-Tech Industries Development Zone Shaanxi Province, China" },
 ];
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
           <div className="cta-banner">
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white font-display mb-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-white font-display mb-2" style={{ color: "#fff" }}>
                   Ready to expand your trade reach?
                 </h2>
                 <p className="text-white/70 text-sm md:text-base max-w-lg">
@@ -70,8 +71,8 @@ export default function Footer() {
           {/* Brand column */}
           <div className="xl:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5" aria-label="YAT Business Group home">
-              <div className="w-10 h-10 rounded-md bg-[#0052CC] flex items-center justify-center font-bold text-xl font-display">
-                Y
+              <div className="w-10 h-10 rounded-md bg-[#FFFFFF] flex items-center justify-center font-bold text-xl font-display">
+                <img src="/yatm-logo.png" alt="Logo" width={32} height={32} />
               </div>
               <div>
                 <p className="font-bold text-lg text-white font-display leading-tight">YAT Business Group</p>
@@ -80,8 +81,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-white/65 text-sm leading-relaxed mb-6 max-w-sm">
-              Connecting businesses to global markets through expert import, export, and logistics solutions.
-              Trusted by leading enterprises across 40+ countries.
+              Connecting businesses to global markets through expert import, export, manufacturing, and logistics solutions.
+              Trusted by leading enterprises across the globe.
             </p>
 
             {/* Social icons */}
@@ -106,17 +107,17 @@ export default function Footer() {
 
             {/* Contact quick links */}
             <div className="flex flex-col gap-3">
-              <a href="mailto:info@yatbusinessgroup.com" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
+              <a href="mailto:info@yat-m.com" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
                 <Mail size={14} className="text-[#4C9AFF] shrink-0" />
-                info@yatbusinessgroup.com
+                info@yat-m.com
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
+              <a href="tel:+251911362741" className="flex items-center gap-2.5 text-sm text-white/65 hover:text-white transition-colors">
                 <Phone size={14} className="text-[#4C9AFF] shrink-0" />
-                +1 (234) 567-890
+                (+251) 911-362-741
               </a>
               <div className="flex items-start gap-2.5 text-sm text-white/65">
                 <Globe size={14} className="text-[#4C9AFF] shrink-0 mt-0.5" />
-                Operating in 40+ countries worldwide
+                Operating in 3+ countries worldwide
               </div>
             </div>
           </div>
