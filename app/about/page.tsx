@@ -313,11 +313,11 @@ export default function AboutPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#FFFFFF" }}>
                 Partner with a Team That Delivers
               </h2>
               <p className="text-white/65 mb-7 max-w-lg mx-auto">
-                15+ years of results-driven trade expertise is ready to work for your business.
+                7+ years of results-driven trade expertise is ready to work for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/contact" className="btn btn-white btn-primary-lg">
