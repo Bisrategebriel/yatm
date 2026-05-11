@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import Link from "next/link";
 import {
   Package, ArrowLeftRight, Truck, ShieldCheck, BarChart3,
@@ -10,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "YAT - Global Trade & Logistics Solutions",
   description:
-    "YAT Business Group connects businesses to global markets with expert import, export, freight, compliance, and consulting services across 40+ countries.",
+    "Delivering seamless manufacturing, global trade, and logistics solutions with precision, reliability, and international expertise.",
   alternates: { canonical: "https://www.yatbusinessgroup.com" },
 };
 
@@ -128,19 +129,29 @@ const industries = [
   { href: "/industries#construction", icon: Building2, label: "Construction" },
 ];
 
-const partners = ["ISO 9001", "FIATA", "WCO Member", "IATA Certified", "UN Global Compact"];
+const partners = ["ISO 9001", "Volza", "Global Suppliers", "CTC Certified"];
 
 export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
       <section
-        className="relative min-h-[100svh] flex items-center overflow-hidden"
+        className="relative min-h-[100svh] flex items-center overflow-hidden bg-size-[500%] md:bg-size-[150%]"
         style={{
-          background: "linear-gradient(135deg, #091E42 0%, #172B4D 45%, #0747A6 75%, #0052CC 100%)",
+          backgroundColor: "#091E42",
+          backgroundImage: "url('/images/bg-landing.jpg')",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
         aria-label="Hero section"
       >
+        {/* Gradient overlay — preserves brand palette and ensures text legibility */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(135deg, rgba(9,30,66,0.88) 0%, rgba(23,43,77,0.80) 45%, rgba(7,71,166,0.70) 75%, rgba(0,82,204,0.60) 100%)",
+          }}
+        />
         {/* Grid overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
@@ -154,9 +165,9 @@ export default function HomePage() {
         <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] rounded-full opacity-10 pointer-events-none" style={{ background: "radial-gradient(circle, #4C9AFF 0%, transparent 70%)" }} />
 
         <div className="container-site relative z-10 pt-28 pb-20">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto hero-content text-center">
             {/* Trust badge row */}
-            <div className="flex flex-wrap gap-3 mb-8 animate-fade-up">
+            <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-up">
               {partners.map((p) => (
                 <span key={p} className="trust-badge">
                   <CheckCircle2 size={12} className="text-[#00C7E6]" />
@@ -165,19 +176,19 @@ export default function HomePage() {
               ))}
             </div>
 
-            <h1 className="font-display font-extrabold text-white mb-6 animate-fade-up-delay-1"
+            <h1 className="font-display font-extrabold !text-white mb-6 animate-fade-up-delay-1"
               style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
             >
               Connecting Markets.{" "}
-              <span className="gradient-text-light">Moving Goods.</span>
+              <span>Moving Goods.</span>
               <br />Growing Business.
             </h1>
 
-            <p className="text-white/70 mb-8 max-w-xl animate-fade-up-delay-2" style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: "1.7" }}>
-              YAT Business Group delivers end-to-end trade solutions across 40+ countries — from import sourcing and export compliance to multimodal freight and strategic consulting.
+            <p className="text-white/70 mb-8 max-w-2xl mx-auto animate-fade-up-delay-2" style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", lineHeight: "1.7" }}>
+              Delivering seamless manufacturing, global trade, and logistics solutions with precision, reliability, and international expertise.
             </p>
 
-            <div className="flex flex-wrap gap-4 animate-fade-up-delay-3">
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-up-delay-3">
               <Link href="/contact" className="btn btn-white btn-primary-lg text-base">
                 Request a Quote
                 <ArrowRight size={16} />
