@@ -20,10 +20,10 @@ const services = [
 ];
 
 const stats = [
-  { value: "0", label: "Compliance penalties across 3,000+ managed shipments" },
-  { value: "100%", label: "Sanctions screening coverage on all transactions" },
-  { value: "18+", label: "Jurisdictions actively monitored for regulatory changes" },
-  { value: "95%", label: "Customs audit rate — clean outcomes with no penalties" },
+  { value: "7+", label: "Years of experience in manufacturing ops." },
+  { value: "200M+", label: "Birr Industrial Investment" },
+  { value: "6000+", label: "Bottles / Hour Capacity Juice production line" },
+  { value: "200+", label: "Hectares of Plantation Support" },
 ];
 
 export default function CompliancePage() {
