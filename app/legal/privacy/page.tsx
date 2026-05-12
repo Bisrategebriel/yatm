@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "YAT Business Group Privacy Policy — how we collect, use, and protect your personal data in compliance with GDPR, CCPA, and applicable data protection laws.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/legal/privacy" },
+  alternates: { canonical: "https://www.yat-m.com/legal/privacy" },
   robots: { index: true, follow: false },
 };
 
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
             <span>Privacy Policy</span>
           </nav>
           <h1 className="font-display font-extrabold text-white mb-4"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Privacy Policy
           </h1>
@@ -157,7 +157,7 @@ export default function PrivacyPage() {
 
             <div className="mt-12 p-6 rounded-[8px] bg-[#F4F5F7] border border-[#DFE1E6]">
               <h3 className="font-bold text-[#172B4D] mb-3">Questions or Requests?</h3>
-              <p className="text-sm text-[#42526E] mb-4">Contact our Data Protection Officer at <a href="mailto:privacy@yatbusinessgroup.com" className="text-[#0052CC] hover:underline">privacy@yatbusinessgroup.com</a></p>
+              <p className="text-sm text-[#42526E] mb-4">Contact our Data Protection Officer at <a href="mailto:privacy@yat-m.com" className="text-[#0052CC] hover:underline">privacy@yat-m.com</a></p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact" className="btn btn-primary text-sm">Contact Us</Link>
                 <Link href="/legal/cookies" className="btn btn-secondary text-sm">Cookie Policy</Link>
