@@ -4,15 +4,15 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import {
   Menu, X, ChevronDown, Globe, Package, ArrowLeftRight,
-  Truck, ShieldCheck, BarChart3, Phone
+  Truck, ShieldCheck, BarChart3, Phone, Factory
 } from "lucide-react";
 
 const services = [
   { href: "/services/import", label: "Import Services", icon: Package, desc: "Global sourcing & import management" },
   { href: "/services/export", label: "Export Services", icon: ArrowLeftRight, desc: "Export documentation & compliance" },
   { href: "/services/logistics", label: "Freight & Logistics", icon: Truck, desc: "End-to-end supply chain solutions" },
-  { href: "/services/compliance", label: "Trade Compliance", icon: ShieldCheck, desc: "Customs & regulatory expertise" },
-  { href: "/services/consulting", label: "Consulting & Advisory", icon: BarChart3, desc: "Strategic trade consulting" },
+  { href: "/services/manufacturing", label: "Manufacturing", icon: Factory, desc: "Strategic manufacturing and industrial solutions" },
+  { href: "/services/consulting", label: "Consulting & Advisory", icon: BarChart3, desc: "Strategic business consulting" },
 ];
 
 const navLinks = [
