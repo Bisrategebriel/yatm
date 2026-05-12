@@ -63,8 +63,32 @@ export default function ContactPage() {
     e.preventDefault();
     if (!consent) return;
     setFormState("submitting");
-    // Simulate API call
-    await new Promise((r) => setTimeout(r, 1800));
+
+    // Format the message for WhatsApp
+    const serviceLabel = serviceOptions.find(s => s.value === formData.service)?.label || formData.service || "General Enquiry";
+
+    const messageText = `*New Enquiry from YAT Website*
+--------------------------------
+*Service:* ${serviceLabel}
+*Name:* ${formData.name}
+*Company:* ${formData.company}
+*Country:* ${formData.country}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || "Not provided"}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/251911362741?text=${encodedMessage}`;
+
+    // Simulate small delay for better UX
+    await new Promise((r) => setTimeout(r, 1000));
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+
     setFormState("success");
   };
 
