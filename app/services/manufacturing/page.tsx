@@ -139,13 +139,13 @@ export default function CompliancePage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}>
-                Start with a Compliance Health Check
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#FFFFFF" }}>
+                Built to Support Smarter Manufacturing Operations
               </h2>
-              <p className="text-white/65 mb-7 max-w-md mx-auto">We'll review your current trade compliance posture and identify the highest-priority risks — at no cost.</p>
+              <p className="text-white/65 mb-7 max-w-md mx-auto">We help businesses strengthen production capacity via quality manufacturing, and industrial machinery solutions.</p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="btn btn-white btn-primary-lg">Free Compliance Review <ArrowRight size={16} /></Link>
-                <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Talk to an Expert</Link>
+                <Link href="/contact" className="btn btn-white btn-primary-lg">Request a Quote <ArrowRight size={16} /></Link>
+                <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Explore Manufacturing Solutions</Link>
               </div>
             </div>
           </div>
