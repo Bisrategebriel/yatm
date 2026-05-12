@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Wheat, Zap, ShoppingCart, Factory, Ship, Building2, Pill, Car, CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Featured Industries",
-  description: "YAT Business Group serves Agriculture, Energy, FMCG, Manufacturing, Shipping, Construction, Pharmaceuticals, and Automotive industries with specialist trade solutions.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/industries" },
+  title: "Industries",
+  description: "YAT Business Group serves Agriculture, Energy, FMCG, Shipping, and Manufacturing, industries with specialist trade solutions.",
+  alternates: { canonical: "https://www.yat-m.com/industries" },
 };
 
 const industries = [
@@ -166,7 +166,7 @@ export default function IndustriesPage() {
           </nav>
           <span className="section-label section-label-light mb-4">Sector Expertise</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Deep Expertise Across<br />8 Key Sectors
           </h1>
@@ -223,7 +223,7 @@ export default function IndustriesPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#FFFFFF" }}>
                 Don't See Your Industry?
               </h2>
               <p className="text-white/65 mb-7 max-w-md mx-auto">
