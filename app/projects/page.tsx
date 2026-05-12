@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, Clock, CheckCircle2, BarChart3 } from "lucide-react";
+import { ArrowRight, TrendingUp, Clock, CheckCircle2, BarChart3, DollarSign, ShieldCheck, Zap } from "lucide-react";
 import ImageSlider from "@/components/ImageSlider";
 
 export const metadata: Metadata = {
@@ -236,18 +236,44 @@ export default function ProjectsPage() {
                 ))}
               </ul>
             </div>
-            <div className="card p-8 bg-gradient-to-br from-[#091E42] to-[#0052CC] text-white border-0">
-              <BarChart3 size={32} className="text-white/40 mb-4" />
-              <h3 className="font-display font-bold text-xl mb-6">Average Client Outcomes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { label: "Cost reduction achieved", value: "18–31%" },
-                { label: "Clearance time improvement", value: "35–45%" },
-                { label: "Compliance risk reduction", value: "90%+" },
-                { label: "First-year ROI on consulting", value: "3.2x" },
+                { 
+                  icon: DollarSign, 
+                  title: "Cost Reduction", 
+                  value: "18–31%", 
+                  desc: "Average savings in total logistics and duty costs.",
+                  color: "#00875A"
+                },
+                { 
+                  icon: Zap, 
+                  title: "Time Efficiency", 
+                  value: "35–45%", 
+                  desc: "Improvement in customs clearance and transit speeds.",
+                  color: "#00B8D9"
+                },
+                { 
+                  icon: ShieldCheck, 
+                  title: "Risk Reduction", 
+                  value: "90%+", 
+                  desc: "Decrease in compliance errors and penalty exposure.",
+                  color: "#DE350B"
+                },
+                { 
+                  icon: TrendingUp, 
+                  title: "Investment ROI", 
+                  value: "3.2x", 
+                  desc: "First-year return for every dollar spent on advisory.",
+                  color: "#FF8B00"
+                },
               ].map((o) => (
-                <div key={o.label} className="flex justify-between items-center border-b border-white/15 py-3 last:border-0">
-                  <span className="text-sm text-white/70">{o.label}</span>
-                  <span className="font-bold text-white">{o.value}</span>
+                <div key={o.title} className="p-6 bg-white rounded-xl border border-[#DFE1E6] hover:border-[#0052CC] hover:shadow-xl transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-transform group-hover:scale-110" style={{ background: `${o.color}15`, color: o.color }}>
+                    <o.icon size={24} />
+                  </div>
+                  <p className="font-display font-extrabold text-3xl text-[#091E42] mb-1">{o.value}</p>
+                  <h4 className="text-sm font-bold text-[#344563] mb-2">{o.title}</h4>
+                  <p className="text-xs text-[#6B778C] leading-relaxed">{o.desc}</p>
                 </div>
               ))}
             </div>
