@@ -185,7 +185,7 @@ export default function Footer() {
         <div className="container-site py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white/40">
-              © {new Date().getFullYear()} YAT Business Group. All rights reserved.
+              © {new Date().getFullYear()} &nbsp; All rights reserved. &nbsp; Built with Purpose by &nbsp; <Link style={{ color: "#FF5A00" }} href="https://flint-technologies.com">Flint Technologies</Link>
             </p>
             <div className="flex items-center gap-5">
               {footerLinks.legal.map((l) => (
