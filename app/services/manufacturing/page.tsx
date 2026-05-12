@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShieldCheck, CheckCircle2, ArrowRight, AlertTriangle, FileSearch, Globe, BarChart3, Users, BookOpen } from "lucide-react";
+import { ShieldCheck, CheckCircle2, ArrowRight, AlertTriangle, FileSearch, Globe, BarChart3, Users, BookOpen, Factory, WheatIcon, ContactIcon, ForkliftIcon, RecycleIcon, VanIcon, PackageOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Trade Compliance",
-  description: "YAT Business Group trade compliance services: customs audits, sanctions screening, tariff classification, AEO support, and regulatory change monitoring.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/services/compliance" },
+  title: "Manufacturing",
+  description: "YAT delivers manufacturing support and industrial product solutions with expertise in plastic products, tyre production, and factory systems.",
+  alternates: { canonical: "https://www.yat-m.com/services/manufacturing" },
 };
 
 const services = [
-  { icon: FileSearch, title: "Customs Compliance Audits", desc: "Comprehensive review of your import/export records, classification accuracy, valuation methods, and procedural compliance to identify risks before regulators do." },
-  { icon: AlertTriangle, title: "Sanctions & Denied Party Screening", desc: "Automated and manual screening against OFAC, EU, UN, and UK sanctions lists to ensure every transaction is legally compliant." },
-  { icon: Globe, title: "Tariff Classification & Engineering", desc: "Accurate HS code assignment, tariff engineering opportunities, and binding ruling applications to minimize duty exposure." },
-  { icon: BarChart3, title: "Free Trade Agreement Utilisation", desc: "We identify applicable FTAs, prepare origin documentation, and implement preferential tariff programmes to reduce your import duty burden." },
-  { icon: ShieldCheck, title: "Export Controls Advisory", desc: "ECCN classification, EAR/ITAR compliance, export licence applications, and technology transfer controls for dual-use and controlled goods." },
-  { icon: BookOpen, title: "Compliance Training & Workshops", desc: "Tailored in-house training programmes for procurement, operations, and finance teams on customs, sanctions, and trade compliance best practices." },
-  { icon: Users, title: "AEO Application Support", desc: "Full support for Authorised Economic Operator status applications — UK, EU, UAE, and other jurisdiction-specific trusted trader programmes." },
-  { icon: AlertTriangle, title: "Anti-Dumping Advisory", desc: "Monitoring and advisory on anti-dumping and countervailing duty orders that may impact your product categories and source markets." },
+  { icon: PackageOpen, title: "Plastic Product Manufacturing", desc: "Production of quality plastic products designed for commercial and industrial applications." },
+  { icon: VanIcon, title: "Tyre Manufacturing", desc: "Supporting industrial and commercial sectors through tyre manufacturing operations and related production activities." },
+  { icon: ForkliftIcon, title: "Industrial Machinery Supply", desc: "Import and supply of industrial machines and equipment for manufacturing facilities and production operations." },
+  { icon: Factory, title: "Factory Design & Installation", desc: "Providing industrial setup support for factories and production facilities." },
+  { icon: RecycleIcon, title: "Recycling & Industrial Systems", desc: "Supporting sustainable industrial operations through recycling and processing machinery solutions." },
+  { icon: ContactIcon, title: "Technical & Operational Support", desc: "Helping businesses improve operational efficiency through guidance, coordination, and training support." },
+  { icon: Users, title: "Manufacturing Consultancy", desc: "Strategic support and consultancy services for businesses planning to establish or expand manufacturing operations." },
+  { icon: WheatIcon, title: "Agro-Processing Support", desc: "Supporting agro-processing operations through industrial solutions, machinery coordination, and production infrastructure support." },
 ];
 
 const stats = [
@@ -34,25 +34,25 @@ export default function CompliancePage() {
           <nav className="breadcrumb mb-6" aria-label="Breadcrumb">
             <Link href="/">Home</Link><span className="breadcrumb-sep">/</span>
             <Link href="/services">Services</Link><span className="breadcrumb-sep">/</span>
-            <span>Trade Compliance</span>
+            <span>Manufacturing</span>
           </nav>
           <div className="flex items-center gap-3 mb-5">
             <div className="w-12 h-12 rounded-[8px] bg-white/10 flex items-center justify-center">
-              <ShieldCheck size={24} className="text-white" />
+              <Factory size={24} className="text-white" />
             </div>
-            <span className="section-label section-label-light">Trade Compliance</span>
+            <span className="section-label section-label-light">Manufacturing</span>
           </div>
           <h1 className="font-display font-extrabold text-white mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
-            Protecting Your Business<br />from Regulatory Risk
+            Manufacturing Solutions <br />Built for Quality, Efficiency & Growth
           </h1>
           <p className="text-white/70 max-w-2xl text-lg leading-relaxed mb-8">
-            Trade compliance failures can mean penalties, shipment seizures, and reputational damage. Our specialists ensure every transaction is audit-ready and fully compliant across all jurisdictions.
+            YAT Manufacturing P.L.C. delivers reliable manufacturing, industrial machinery, and factory support solutions designed to help businesses operate efficiently and scale with confidence.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="btn btn-white btn-primary-lg">Request a Compliance Audit <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Speak to a Specialist</Link>
+            <Link href="/contact" className="btn btn-white btn-primary-lg">Request Quote <ArrowRight size={16} /></Link>
+            <Link href="/services/manufacturing#why-it-matters" className="btn btn-ghost-white btn-primary-lg">Why It Matters</Link>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function CompliancePage() {
             <h2 id="services-heading" className="font-display font-bold text-[#091E42] mt-4"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
             >
-              Full-Spectrum Compliance Services
+              Manufacturing Capabilities
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -95,7 +95,7 @@ export default function CompliancePage() {
         </div>
       </section>
 
-      <section className="section-py bg-white">
+      <section className="section-py bg-white" id="why-it-matters">
         <div className="container-site">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -103,19 +103,19 @@ export default function CompliancePage() {
               <h2 className="font-display font-bold text-[#091E42] mt-4 mb-5"
                 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
               >
-                The Cost of Non-Compliance
+                Manufacturing Built on Quality, Precision & Reliability
               </h2>
               <div className="flex flex-col gap-4 text-[#344563]">
-                <p>Trade non-compliance can result in cargo seizures, financial penalties running into millions, loss of import/export privileges, and severe reputational damage to your brand.</p>
-                <p>Our proactive compliance model identifies risks before they become violations — saving clients an average of 34% in potential penalties and 2–5 days per shipment in clearance delays.</p>
+                <p>At YAT Manufacturing P.L.C., we understand that every product, machine, and production system directly impacts business performance. That is why we focus on dependable manufacturing processes, quality-driven operations, and industrial solutions designed to support long-term growth.</p>
+                <p>From plastic product manufacturing to industrial machinery support and factory setup solutions, we help businesses operate with greater efficiency, consistency, and confidence.</p>
               </div>
             </div>
             <div className="flex flex-col gap-4">
               {[
-                { label: "Customs misclassification penalties", range: "$5K – $500K+ per violation" },
-                { label: "Sanctions violations (US OFAC)", range: "Up to $1M per transaction" },
-                { label: "Export control violations (EAR/ITAR)", range: "Up to $1M + criminal liability" },
-                { label: "Anti-dumping duty back-payments", range: "100%–300% of cargo value" },
+                { label: "Losing Money From Production Downtime?", range: "$5,000–$50,000 per hour on production scale" },
+                { label: "Dealing With Poor Product Quality?", range: "10%–20% of total manufacturing costs" },
+                { label: "Struggling With Inefficient Operations?", range: "reduce productivity & delivery by up to 30%" },
+                { label: "Losing Clients Due to Delayed Deliveries?", range: "increase customer churn by up to 25%." },
               ].map((r) => (
                 <div key={r.label} className="p-4 rounded-[8px] border border-[#FF5630] bg-[#FFEBE6] flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
