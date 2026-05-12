@@ -6,8 +6,8 @@ import ImageSlider from "@/components/ImageSlider";
 export const metadata: Metadata = {
   title: "Import Services",
   description:
-    "YAT Business Group's end-to-end import services: supplier sourcing, HS code classification, customs clearance, duty optimisation, and last-mile delivery across 40+ source markets.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/services/import" },
+    "Source industrial machinery, manufacturing equipment, stationery materials, and specialized products through trusted international supplier networks. YAT manages the complete import process from sourcing to customs clearance and delivery.",
+  alternates: { canonical: "https://www.yat-m.com/services/import" },
 };
 
 const process = [

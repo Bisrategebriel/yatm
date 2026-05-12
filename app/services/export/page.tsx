@@ -1,35 +1,48 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeftRight, CheckCircle2, ArrowRight, FileText, ShieldCheck, Globe, Package, BarChart3 } from "lucide-react";
+import ExportMapContainer from "@/components/ExportMapContainer";
 
 export const metadata: Metadata = {
   title: "Export Services",
-  description: "YAT Business Group export services: export licensing, documentation, packaging compliance, destination market regulatory support across 35+ export corridors.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/services/export" },
+  description: "Expand into international markets with YAT’s export solutions for Ethiopian agricultural products including coffee, sesame, pulses, and oil seeds.",
+  alternates: { canonical: "https://www.yat-m.com/services/export" },
 };
 
 const process = [
-  { step: "01", icon: Globe, title: "Market Assessment", desc: "We evaluate your target export market — regulations, tariff structures, local standards, and competitive landscape." },
-  { step: "02", icon: ShieldCheck, title: "Compliance Planning", desc: "Export control classification, sanctions screening, denied party checks, and licence requirement assessment." },
-  { step: "03", icon: FileText, title: "Documentation", desc: "Export licences, commercial invoices, packing lists, certificates of origin, phytosanitary and health certificates." },
-  { step: "04", icon: Package, title: "Packaging & Labelling", desc: "Destination-market compliant packaging, labelling in required languages, and product marking requirements." },
-  { step: "05", icon: ArrowLeftRight, title: "Shipment & Customs", desc: "Export customs filing, commodity screening, and coordinated departure with your freight forwarder." },
-  { step: "06", icon: BarChart3, title: "Performance Reporting", desc: "Post-shipment analytics, delivery confirmation, and trade performance dashboards for your records." },
+  { step: "01", icon: Globe, title: "Product Selection & Quality Preparation", desc: "Carefully selecting and preparing export products such as coffee, sesame, oil seeds, and pulses according to international quality standards." },
+  { step: "02", icon: ShieldCheck, title: "Buyer Connection & Trade Coordination", desc: "Connecting with international buyers, negotiating trade terms, and confirming export agreements through YAT’s global business network." },
+  { step: "03", icon: FileText, title: "Documentation & Export Compliance", desc: "Preparing export documentation, certifications, customs requirements, and shipping paperwork for international trade compliance." },
+  { step: "04", icon: Package, title: "Packaging & Logistics Arrangement", desc: "Managing product packaging, warehousing, cargo handling, and transportation coordination for safe international delivery." },
+  { step: "05", icon: ArrowLeftRight, title: "Shipping & Freight Forwarding", desc: "Coordinating sea freight, cargo forwarding, and international shipping operations through trusted logistics partners." },
+  { step: "06", icon: BarChart3, title: "Delivery & Market Fulfillment", desc: "Ensuring products reach international buyers efficiently while maintaining quality, reliability, and long-term trade relationships." },
 ];
 
 const features = [
-  "Export market feasibility studies",
-  "Export licensing & permits",
-  "Commodity classification (ECCN / Schedule B)",
-  "Certificate of origin processing",
-  "Export documentation package",
-  "Packaging & labelling compliance",
-  "Phytosanitary & health certificates",
-  "Destination country import requirements",
-  "Denied party & sanctions screening",
-  "Export credit insurance coordination",
-  "Free trade agreement tariff benefits",
-  "Export incentive & duty drawback advisory",
+  "Coffee export (Sidama, Yirgacheffe, & Kochere coffee)",
+  "Sesame export",
+  "Oil seeds export",
+  "Pulses export",
+  "Green mung bean export",
+  "Tea export",
+  "Agricultural product sourcing and supply",
+  "International buyer network coordination",
+  "Export trade consultancy",
+  "Export documentation support",
+  "International shipping coordination",
+  "Freight forwarding services",
+  "Customs clearing services",
+  "Port handling operations",
+  "Inland transportation and logistics support",
+  "Warehousing and storage planning",
+  "Coffee storage warehouse development",
+  "Coffee cleaning and blowing operations (planned expansion)",
+  "Roasted coffee export development",
+  "Quality-focused export handling",
+  "Global market access support",
+  "Cross-border trade coordination",
+  "Supply chain and logistics management",
+  "Agricultural export market expansion support",
 ];
 
 const destinations = [
@@ -55,7 +68,7 @@ export default function ExportPage() {
             <span className="section-label section-label-light">Export Services</span>
           </div>
           <h1 className="font-display font-extrabold text-white mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Export with Confidence<br />to 35+ Markets
           </h1>
@@ -64,7 +77,7 @@ export default function ExportPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-white btn-primary-lg">Request a Quote <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Speak to an Expert</Link>
+            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Explore Export Services</Link>
           </div>
         </div>
       </div>
@@ -96,25 +109,29 @@ export default function ExportPage() {
 
       <section className="section-py bg-[#F4F5F7]">
         <div className="container-site">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="flex flex-col gap-16">
+            {/* Map on top - Full Width */}
             <div>
-              <h2 className="font-display font-bold text-[#091E42] text-2xl mb-6">Export Service Capabilities</h2>
-              <div className="grid gap-2">
-                {features.map((f) => (
-                  <div key={f} className="flex items-start gap-3 py-2">
-                    <CheckCircle2 size={16} className="text-[#00875A] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-[#344563]">{f}</span>
-                  </div>
-                ))}
+              <div className="text-center mb-8">
+                <h2 className="font-display font-bold text-[#091E42] mt-1"
+                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>Global Export Reach</h2>
+                <p className="text-[#6B778C] text-sm">Visualizing our active trade routes from Ethiopia to over 35+ international markets.</p>
               </div>
+              <ExportMapContainer />
             </div>
+
+            {/* Capabilities below - Full Width Wrapping List */}
             <div>
-              <h2 className="font-display font-bold text-[#091E42] text-2xl mb-6">Export Destinations Covered</h2>
-              <div className="grid gap-3">
-                {destinations.map((d) => (
-                  <div key={d} className="flex items-center gap-3 p-3 bg-white rounded-[6px] border border-[#DFE1E6] text-sm text-[#344563] font-medium">
-                    <div className="w-2 h-2 rounded-full bg-[#00875A] flex-shrink-0" />
-                    {d}
+              <div className="text-center mb-10">
+                <h2 className="font-display font-bold text-[#091E42] mt-4"
+                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>Export Service Capabilities</h2>
+                <p className="text-[#6B778C] text-sm">Comprehensive solutions for navigating international trade regulations and logistics.</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {features.map((f) => (
+                  <div key={f} className="flex items-center gap-3 px-5 py-4 bg-white rounded-lg border border-[#DFE1E6] shadow-sm hover:border-[#00875A] transition-colors">
+                    <CheckCircle2 size={16} className="text-[#00875A] flex-shrink-0" />
+                    <span className="text-sm font-medium text-[#344563] leading-snug">{f}</span>
                   </div>
                 ))}
               </div>
@@ -127,7 +144,7 @@ export default function ExportPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#FFFFFF" }}>
                 Ready to Reach New Markets?
               </h2>
               <p className="text-white/65 mb-7 max-w-md mx-auto">Tell us your target destinations. We'll assess the regulatory requirements and build your export plan.</p>
