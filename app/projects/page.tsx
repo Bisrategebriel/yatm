@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, Clock, CheckCircle2, BarChart3, DollarSign, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, Clock, CheckCircle2, DollarSign, ShieldCheck, Zap } from "lucide-react";
 import ImageSlider from "@/components/ImageSlider";
 
 export const metadata: Metadata = {
@@ -238,31 +238,31 @@ export default function ProjectsPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { 
-                  icon: DollarSign, 
-                  title: "Cost Reduction", 
-                  value: "18–31%", 
+                {
+                  icon: DollarSign,
+                  title: "Cost Reduction",
+                  value: "18–31%",
                   desc: "Average savings in total logistics and duty costs.",
                   color: "#00875A"
                 },
-                { 
-                  icon: Zap, 
-                  title: "Time Efficiency", 
-                  value: "35–45%", 
+                {
+                  icon: Zap,
+                  title: "Time Efficiency",
+                  value: "35–45%",
                   desc: "Improvement in customs clearance and transit speeds.",
                   color: "#00B8D9"
                 },
-                { 
-                  icon: ShieldCheck, 
-                  title: "Risk Reduction", 
-                  value: "90%+", 
+                {
+                  icon: ShieldCheck,
+                  title: "Risk Reduction",
+                  value: "90%+",
                   desc: "Decrease in compliance errors and penalty exposure.",
                   color: "#DE350B"
                 },
-                { 
-                  icon: TrendingUp, 
-                  title: "Investment ROI", 
-                  value: "3.2x", 
+                {
+                  icon: TrendingUp,
+                  title: "Investment ROI",
+                  value: "3.2x",
                   desc: "First-year return for every dollar spent on advisory.",
                   color: "#FF8B00"
                 },
