@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, TrendingUp, Clock, CheckCircle2, BarChart3 } from "lucide-react";
+import ImageSlider from "@/components/ImageSlider";
 
 export const metadata: Metadata = {
-  title: "Projects & Case Studies",
+  title: "Projects",
   description: "Real results from YAT Business Group: client success stories across import, export, logistics, and compliance engagements spanning multiple industries and regions.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/projects" },
+  alternates: { canonical: "https://www.yat-m.com/projects" },
 };
 
 const projects = [
@@ -26,6 +27,11 @@ const projects = [
       { metric: "Zero", label: "Phytosanitary compliance failures" },
       { metric: "6", label: "Source markets under management" },
     ],
+    images: [
+      { id: 1, image: "/images/services/stationery-materials.png", title: "Meridian Foods Logistics", description: "Managing fresh produce imports at scale." },
+      { id: 2, image: "/images/services/freight-shipping.png", title: "Port Operations", description: "Efficient handling at UK ports." },
+      { id: 3, image: "/images/services/manufacturing-equipment.png", title: "Quality Control", description: "Ensuring zero phytosanitary failures." }
+    ]
   },
   {
     id: "gulf-trading",
@@ -44,6 +50,10 @@ const projects = [
       { metric: "100%", label: "LC (Letter of Credit) acceptance rate" },
       { metric: "18", label: "In-country agent relationships established" },
     ],
+    images: [
+      { id: 1, image: "/images/services/construction-materials.png", title: "Market Entry Strategy", description: "Expanding Gulf Trading into African corridors." },
+      { id: 2, image: "/images/services/industrial-machinery.png", title: "Distribution Network", description: "Vetted and onboarded 18 regional agents." }
+    ]
   },
   {
     id: "sino-pacific",
@@ -62,6 +72,10 @@ const projects = [
       { metric: "4", label: "Country supply chain integrated" },
       { metric: "0", label: "Shipment delays in 6 months post-launch" },
     ],
+    images: [
+      { id: 1, image: "/images/services/customs-clearing.png", title: "Multimodal Logistics", description: "Sea-to-rail supply chain optimization." },
+      { id: 2, image: "/images/services/manufacturing-equipment.png", title: "Supply Chain Visibility", description: "Real-time tracking across 4 countries." }
+    ]
   },
   {
     id: "euro-pharma",
@@ -80,14 +94,18 @@ const projects = [
       { metric: "12", label: "EU member states brought into compliance" },
       { metric: "4 wks", label: "Full remediation completed" },
     ],
+    images: [
+      { id: 1, image: "/images/services/stationery-materials.png", title: "Regulatory Compliance", description: "AEO Authorized Economic Operator status support." },
+      { id: 2, image: "/images/services/industrial-machinery.png", title: "Pharma Logistics", description: "GDP-compliant pharmaceutical supply chains." }
+    ]
   },
 ];
 
 const aggregateStats = [
   { value: "$2.8B+", label: "Total trade facilitated annually" },
-  { value: "98%", label: "Client satisfaction rate" },
-  { value: "40+", label: "Countries represented in project portfolio" },
-  { value: "1,200+", label: "Active client engagements" },
+  { value: "99%", label: "Client satisfaction rate" },
+  { value: "10+", label: "Countries represented in project portfolio" },
+  { value: "200+", label: "Active client engagements" },
 ];
 
 export default function ProjectsPage() {
@@ -101,12 +119,12 @@ export default function ProjectsPage() {
           </nav>
           <span className="section-label section-label-light mb-4">Client Results</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Real Results for<br />Real Businesses
           </h1>
           <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
-            From compliance overhauls to full supply chain redesigns — these are the outcomes we deliver for clients across industries and regions.
+            Explore the projects, industrial operations, and business initiatives that showcase YAT’s expertise in Manufacturing, International trade, Logistics, Energy, FMCG and Agro-processing solutions.
           </p>
         </div>
       </div>
@@ -125,11 +143,11 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Case studies */}
+      {/* Case studies / Projects */}
       <section className="section-py bg-[#F4F5F7]" aria-labelledby="cases-heading">
         <div className="container-site">
           <div className="text-center mb-14">
-            <span className="section-label mb-4">Case Studies</span>
+            <span className="section-label mb-4">Projects</span>
             <h2 id="cases-heading" className="font-display font-bold text-[#091E42] mt-4"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
             >
@@ -139,48 +157,49 @@ export default function ProjectsPage() {
 
           <div className="flex flex-col gap-8">
             {projects.map((p) => (
-              <article key={p.id} id={p.id} className="card p-0 overflow-hidden scroll-mt-24">
-                {/* Header */}
-                <div className="p-6 border-b border-[#EBECF0] flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
-                  <div>
-                    <span className="text-xs font-bold px-2 py-0.5 rounded-[3px] mb-2 inline-block" style={{ background: `${p.tagColor}15`, color: p.tagColor }}>{p.tag}</span>
-                    <h2 className="font-display font-bold text-[#091E42] text-xl">{p.title}</h2>
-                  </div>
-                  <div className="flex items-center gap-4 text-xs text-[#6B778C] flex-shrink-0">
-                    <span className="flex items-center gap-1.5"><Clock size={12} /> {p.duration}</span>
-                    <span className="px-2 py-1 bg-[#F4F5F7] rounded border border-[#DFE1E6]">{p.country}</span>
-                  </div>
-                </div>
-
-                <div className="p-6 lg:p-8">
-                  <div className="grid lg:grid-cols-3 gap-8 mb-8">
+              <article key={p.id} id={p.id} className="card p-0 overflow-hidden scroll-mt-24 group">
+                <div className="flex flex-col">
+                  {/* Header */}
+                  <div className="p-6 lg:p-8 border-b border-[#EBECF0] flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                     <div>
-                      <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-2">Challenge</h3>
-                      <p className="text-sm text-[#344563] leading-relaxed">{p.challenge}</p>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-[3px] mb-2 inline-block" style={{ background: `${p.tagColor}15`, color: p.tagColor }}>{p.tag}</span>
+                      <h2 className="font-display font-bold text-[#091E42] text-2xl">{p.title}</h2>
                     </div>
-                    <div>
-                      <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-2">Our Solution</h3>
-                      <p className="text-sm text-[#344563] leading-relaxed">{p.solution}</p>
-                    </div>
-                    <div>
-                      <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-3">Scope</h3>
-                      <p className="text-sm text-[#344563] leading-relaxed">{p.scope}</p>
+                    <div className="flex items-center gap-4 text-xs text-[#6B778C] flex-shrink-0">
+                      <span className="flex items-center gap-1.5"><Clock size={12} /> {p.duration}</span>
+                      <span className="px-2 py-1 bg-[#F4F5F7] rounded border border-[#DFE1E6]">{p.country}</span>
                     </div>
                   </div>
 
-                  {/* Results */}
-                  <div>
-                    <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-4 flex items-center gap-2">
-                      <TrendingUp size={13} /> Results
-                    </h3>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                      {p.results.map((r) => (
-                        <div key={r.label} className="bg-[#F4F5F7] rounded-[8px] p-4 text-center">
-                          <p className="font-display font-extrabold text-2xl text-[#0052CC] mb-1">{r.metric}</p>
-                          <p className="text-xs text-[#6B778C] leading-tight">{r.label}</p>
+                  <div className="p-6 lg:p-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                      <div>
+                        <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-3">Challenge</h3>
+                        <p className="text-sm text-[#344563] leading-relaxed">{p.challenge}</p>
+                      </div>
+                      <div>
+                        <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-3">Our Solution</h3>
+                        <p className="text-sm text-[#344563] leading-relaxed">{p.solution}</p>
+                      </div>
+                      <div className="md:col-span-2 lg:col-span-1">
+                        <h3 className="text-xs font-bold text-[#97A0AF] uppercase tracking-[0.06em] mb-4 flex items-center gap-2">
+                          <TrendingUp size={13} /> Key Outcomes
+                        </h3>
+                        <div className="grid grid-cols-2 gap-3">
+                          {p.results.slice(0, 2).map((r) => (
+                            <div key={r.label} className="bg-[#F4F5F7] rounded-[8px] p-4 text-center border border-[#DFE1E6]">
+                              <p className="font-display font-extrabold text-2xl text-[#0052CC] mb-1">{r.metric}</p>
+                              <p className="text-[10px] text-[#6B778C] leading-tight uppercase tracking-wider font-semibold">{r.label}</p>
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
                     </div>
+                  </div>
+
+                  {/* Slider Bottom - Full Width with Padding */}
+                  <div className="w-full px-8 pb-8">
+                    <ImageSlider slides={p.images} />
                   </div>
                 </div>
               </article>
@@ -240,7 +259,7 @@ export default function ProjectsPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#FFFFFF" }}>
                 Ready to Be Our Next Success Story?
               </h2>
               <p className="text-white/65 mb-7 max-w-md mx-auto">Share your challenge. We'll design a solution and show you the outcomes we expect to deliver.</p>
