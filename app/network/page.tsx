@@ -90,12 +90,12 @@ export default function NetworkPage() {
           </nav>
           <span className="section-label section-label-light mb-4">Our Footprint</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             A Truly Global<br />Trade Network
           </h1>
           <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
-            3 regional offices. 69+ in-country agents. Active trade corridors across 40+ countries. Wherever your business needs to go, we have someone on the ground.
+            3 regional offices. 6+ in-country agents. Active trade corridors across 10+ countries. Wherever your business needs to go, we have someone on the ground.
           </p>
         </div>
       </div>
@@ -105,10 +105,10 @@ export default function NetworkPage() {
         <div className="container-site">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
             {[
-              { value: "40+", label: "Countries Operational" },
-              { value: "69+", label: "In-Country Agents" },
+              { value: "10+", label: "Countries Operational" },
+              { value: "6+", label: "In-Country Agents" },
               { value: "3", label: "Regional HQ Offices" },
-              { value: "500+", label: "Port Connections" },
+              { value: "5+", label: "Port Connections" },
             ].map((s) => (
               <div key={s.label} className="text-center py-10 px-6">
                 <p className="stat-number">{s.value}</p>
