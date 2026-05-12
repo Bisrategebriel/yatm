@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "8. Governing Law and Jurisdiction",
-    content: "These Terms of Service are governed by and construed in accordance with the laws of the Federal Democratic Republic of Ethiopia, without regard to its conflict of law provisions. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Addis Ababa, Ethiopia.",
+    content: "These Terms of Service are governed by and construed in accordance with the laws of the Federal Democratic Republic of Ethiopia, without regard to its conflict of law provisions. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Addis Ababa, Ethiopia. If you are a consumer in the EU or UK, you may also have rights under the mandatory consumer protection laws of your country of residence.",
   },
   {
     title: "9. Changes to These Terms",
