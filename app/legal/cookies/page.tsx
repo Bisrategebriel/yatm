@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "YAT Business Group Cookie Policy — the types of cookies we use, their purpose, and how to manage your cookie preferences.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/legal/cookies" },
+  alternates: { canonical: "https://www.yat-m.com/legal/cookies" },
   robots: { index: true, follow: false },
 };
 
@@ -67,7 +67,7 @@ export default function CookiePage() {
             <span>Cookie Policy</span>
           </nav>
           <h1 className="font-display font-extrabold text-white mb-4"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Cookie Policy
           </h1>
@@ -135,7 +135,7 @@ export default function CookiePage() {
             <p className="text-sm text-[#344563]">
               For more information about how we handle your personal data, please see our{" "}
               <Link href="/legal/privacy" className="text-[#0052CC] hover:underline font-medium">Privacy Policy</Link>.
-              For questions, contact <a href="mailto:privacy@yatbusinessgroup.com" className="text-[#0052CC] hover:underline">privacy@yatbusinessgroup.com</a>.
+              For questions, contact <a href="mailto:privacy@yat-m.com" className="text-[#0052CC] hover:underline">privacy@yat-m.com</a>.
             </p>
           </div>
 
