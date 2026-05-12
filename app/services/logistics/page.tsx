@@ -47,7 +47,7 @@ export default function LogisticsPage() {
           <h1 className="font-display font-extrabold text-white mb-5"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
-            Multimodal Freight Solutions<br />Across 6 Continents
+            Multimodal Freight Solutions<br />Across 4 Continents
           </h1>
           <p className="text-white/70 max-w-2xl text-lg leading-relaxed mb-8">
             Reliable shipping, forwarding, and logistics solutions designed to simplify global trade operations for businesses and manufacturers.
