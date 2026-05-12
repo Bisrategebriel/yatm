@@ -43,39 +43,32 @@ const offices = [
 
 const regions = [
   {
-    name: "North America",
-    countries: ["United States", "Canada", "Mexico"],
-    agents: 8,
-    corridors: ["US–China", "US–EU", "US–Mexico", "Canada–Asia"],
-    highlight: "Direct customs brokerage licences in US, Canada & Mexico",
+    name: "Africa",
+    countries: ["Ethiopia", "Djibouti", "Sudan", "Somalia"],
+    agents: 5,
+    corridors: ["Ethiopia–Djibouti", "Ethiopia–Sudan", "Ethiopia–Somalia", "Djibouti–Sudan", "Djibouti–Somalia", "Sudan–Somalia"],
+    highlight: "Direct customs brokerage licences in the region",
   },
   {
-    name: "Europe",
-    countries: ["UK", "Germany", "Netherlands", "Belgium", "France", "Poland", "Italy"],
-    agents: 14,
-    corridors: ["EU–Asia", "UK–Africa", "EU–Americas", "EU–GCC"],
-    highlight: "AEO Authorized Economic Operator status in EU & UK",
-  },
-  {
-    name: "Middle East & Africa",
-    countries: ["UAE", "Saudi Arabia", "Egypt", "Nigeria", "South Africa", "Kenya", "Ghana", "Ethiopia"],
-    agents: 22,
+    name: "Middle East",
+    countries: ["UAE", "Saudi Arabia", "Qatar", "Bahrain", "Oman", "Kuwait"],
+    agents: 4,
     corridors: ["UAE–Asia", "GCC–Africa", "East Africa corridor", "West Africa trade lanes"],
     highlight: "Strongest regional agent network on the continent",
   },
   {
-    name: "Asia-Pacific",
-    countries: ["China", "Singapore", "Vietnam", "India", "Indonesia", "Malaysia", "Thailand", "Australia"],
-    agents: 18,
-    corridors: ["China–US", "ASEAN–EU", "India–Africa", "Australia–Asia"],
-    highlight: "Singapore hub provides real-time coordination across 8 Asia markets",
+    name: "Europe",
+    countries: ["UK", "Germany", "Netherlands", "Belgium", "France", "Poland", "Italy"],
+    agents: 4,
+    corridors: ["EU–Asia", "UK–Africa", "EU–Americas", "EU–GCC"],
+    highlight: "AEO Authorized Economic Operator status in EU & UK",
   },
   {
-    name: "Latin America",
-    countries: ["Brazil", "Colombia", "Chile", "Peru", "Argentina"],
-    agents: 7,
-    corridors: ["Brazil–US", "Latin America–EU", "Pacific Alliance corridors"],
-    highlight: "Growing network across Pacific Alliance countries",
+    name: "Asia-Pacific",
+    countries: ["China", "Singapore", "Vietnam", "India", "Indonesia", "Malaysia", "Thailand", "Australia"],
+    agents: 6,
+    corridors: ["China–US", "ASEAN–EU", "India–Africa", "Australia–Asia"],
+    highlight: "Singapore hub provides real-time coordination across 8 Asia markets",
   },
 ];
 
@@ -243,7 +236,7 @@ export default function NetworkPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#FFFFFF" }}>
                 Need Coverage in a Specific Market?
               </h2>
               <p className="text-white/65 mb-7 max-w-md mx-auto">Tell us the country or corridor — we'll confirm our capabilities and connect you with the right specialist.</p>
