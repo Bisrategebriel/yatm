@@ -101,7 +101,7 @@ export default function ConsultingPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-white btn-primary-lg">Book a Consultation <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">See Our Results</Link>
+            <Link href="/project" className="btn btn-ghost-white btn-primary-lg">See Our Results</Link>
           </div>
         </div>
       </div>
@@ -145,54 +145,54 @@ export default function ConsultingPage() {
 
       <section className="section-py bg-white">
         <div className="container-site">
-            <div className="lg:col-span-1">
-              <span className="section-label mb-4">The Consultant's Toolkit</span>
-              <h2 className="font-display font-bold text-[#091E42] mt-4 mb-5" style={{ fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: "1.2" }}>
-                Tangible Outputs You Can Act On
-              </h2>
-              <p className="text-[#42526E] leading-relaxed mb-8 text-lg">
-                Every engagement concludes with clear, actionable deliverables — not just recommendations, but implementation roadmaps your team can execute immediately.
-              </p>
-              
-              <div className="grid gap-4">
-                {deliverables.slice(0, 4).map((item) => (
-                  <div key={item.title} className="group p-5 bg-white rounded-xl border border-[#DFE1E6] hover:border-[#0052CC] hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
-                        style={{ backgroundColor: `${item.color}15`, color: item.color }}
-                      >
-                        <item.icon size={24} />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-[#091E42] mb-1 group-hover:text-[#0052CC] transition-colors">{item.title}</h3>
-                        <p className="text-sm text-[#6B778C] leading-relaxed">{item.desc}</p>
-                      </div>
+          <div className="lg:col-span-1">
+            <span className="section-label mb-4">The Consultant's Toolkit</span>
+            <h2 className="font-display font-bold text-[#091E42] mt-4 mb-5" style={{ fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: "1.2" }}>
+              Tangible Outputs You Can Act On
+            </h2>
+            <p className="text-[#42526E] leading-relaxed mb-8 text-lg">
+              Every engagement concludes with clear, actionable deliverables — not just recommendations, but implementation roadmaps your team can execute immediately.
+            </p>
+
+            <div className="grid gap-4">
+              {deliverables.slice(0, 4).map((item) => (
+                <div key={item.title} className="group p-5 bg-white rounded-xl border border-[#DFE1E6] hover:border-[#0052CC] hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
+                      style={{ backgroundColor: `${item.color}15`, color: item.color }}
+                    >
+                      <item.icon size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#091E42] mb-1 group-hover:text-[#0052CC] transition-colors">{item.title}</h3>
+                      <p className="text-sm text-[#6B778C] leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="grid gap-4">
+              {deliverables.slice(4).map((item) => (
+                <div key={item.title} className="group p-5 bg-white rounded-xl border border-[#DFE1E6] hover:border-[#0052CC] hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
+                      style={{ backgroundColor: `${item.color}15`, color: item.color }}
+                    >
+                      <item.icon size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#091E42] mb-1 group-hover:text-[#0052CC] transition-colors">{item.title}</h3>
+                      <p className="text-sm text-[#6B778C] leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="space-y-6">
-              <div className="grid gap-4">
-                {deliverables.slice(4).map((item) => (
-                  <div key={item.title} className="group p-5 bg-white rounded-xl border border-[#DFE1E6] hover:border-[#0052CC] hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
-                        style={{ backgroundColor: `${item.color}15`, color: item.color }}
-                      >
-                        <item.icon size={24} />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-[#091E42] mb-1 group-hover:text-[#0052CC] transition-colors">{item.title}</h3>
-                        <p className="text-sm text-[#6B778C] leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* <div className="card p-8 bg-gradient-to-br from-[#091E42] to-[#0052CC] text-white border-0 shadow-2xl relative overflow-hidden">
+            {/* <div className="card p-8 bg-gradient-to-br from-[#091E42] to-[#0052CC] text-white border-0 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16" />
                 <div className="relative z-10">
                   <h3 className="font-display font-bold text-xl mb-4">Engagement Models</h3>
@@ -216,7 +216,7 @@ export default function ConsultingPage() {
                   </Link>
                 </div>
               </div> */}
-            </div>
+          </div>
         </div>
       </section>
 
