@@ -4,17 +4,17 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   MapPin, Phone, Mail, Clock, Send, CheckCircle2, Globe,
-  Package, ArrowLeftRight, Truck, ShieldCheck, BarChart3, HelpCircle,
+  Package, ArrowLeftRight, Truck, ShieldCheck, BarChart3, HelpCircle, Factory
 } from "lucide-react";
 import { LinkedInIcon, XIcon, FacebookIcon } from "@/components/SocialIcons";
 
 const offices = [
   {
-    city: "New York",
-    flag: "🇺🇸",
-    address: "1200 Trade Tower, Financial District, New York, NY 10004, USA",
-    phone: "+1 (212) 555-0100",
-    email: "newyork@yatbusinessgroup.com",
+    city: "Addis Ababa",
+    flag: "🇪🇹",
+    address: "Kirkos Sub-city, Woreda 07, Addis Ababa, Ethiopia",
+    phone: "(+251) 911-362-741",
+    email: "addisababa@yat-m.com",
     hours: "Mon–Fri: 8:00 AM – 6:00 PM EST",
   },
   {
@@ -22,16 +22,16 @@ const offices = [
     flag: "🇦🇪",
     address: "Global Trade Centre, Level 12, Sheikh Zayed Road, Dubai, UAE",
     phone: "+971 4 555 0200",
-    email: "dubai@yatbusinessgroup.com",
+    email: "dubai@yat-m.com",
     hours: "Sun–Thu: 8:00 AM – 5:30 PM GST",
   },
   {
-    city: "Singapore",
-    flag: "🇸🇬",
-    address: "Suite 800, International Plaza, 10 Anson Road, Singapore 068796",
-    phone: "+65 6555 0300",
-    email: "singapore@yatbusinessgroup.com",
-    hours: "Mon–Fri: 8:30 AM – 5:30 PM SGT",
+    city: "Guangzhou",
+    flag: "🇨🇳",
+    address: "Xi'an High-Tech Industries Development Zone, Shaanxi Province, China",
+    phone: "+86 29 8657 2472",
+    email: "guangzhou@yat-m.com",
+    hours: "Mon–Fri: 8:30 AM – 5:30 PM CST",
   },
 ];
 
@@ -39,7 +39,7 @@ const serviceOptions = [
   { value: "import", label: "Import Services", icon: Package },
   { value: "export", label: "Export Services", icon: ArrowLeftRight },
   { value: "logistics", label: "Freight & Logistics", icon: Truck },
-  { value: "compliance", label: "Trade Compliance", icon: ShieldCheck },
+  { value: "compliance", label: "Manufacturing", icon: Factory },
   { value: "consulting", label: "Consulting & Advisory", icon: BarChart3 },
   { value: "other", label: "Other / General Enquiry", icon: HelpCircle },
 ];
@@ -79,7 +79,7 @@ export default function ContactPage() {
           </nav>
           <span className="section-label section-label-light mb-4">Get in Touch</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#ffffff" }}
           >
             Let's Start a Conversation
           </h1>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   <p className="text-[#42526E] mb-6 max-w-sm mx-auto">
                     Thank you for reaching out. One of our specialists will respond to your enquiry within 2 business hours.
                   </p>
-                  <button onClick={() => { setFormState("idle"); setConsent(false); setSelectedService(""); setFormData({ name:"",company:"",country:"",email:"",phone:"",subject:"",message:"",service:"" }); }}
+                  <button onClick={() => { setFormState("idle"); setConsent(false); setSelectedService(""); setFormData({ name: "", company: "", country: "", email: "", phone: "", subject: "", message: "", service: "" }); }}
                     className="btn btn-secondary"
                   >
                     Send Another Message
@@ -128,11 +128,10 @@ export default function ContactPage() {
                             key={s.value}
                             type="button"
                             onClick={() => { setSelectedService(s.value); setFormData((prev) => ({ ...prev, service: s.value })); }}
-                            className={`flex items-center gap-2 p-3 rounded-md border-2 text-sm font-medium transition-all text-left ${
-                              selectedService === s.value
-                                ? "border-[#0052CC] bg-[#DEEBFF] text-[#0052CC]"
-                                : "border-[#DFE1E6] bg-white text-[#344563] hover:border-[#B3D4FF]"
-                            }`}
+                            className={`flex items-center gap-2 p-3 rounded-md border-2 text-sm font-medium transition-all text-left ${selectedService === s.value
+                              ? "border-[#0052CC] bg-[#DEEBFF] text-[#0052CC]"
+                              : "border-[#DFE1E6] bg-white text-[#344563] hover:border-[#B3D4FF]"
+                              }`}
                           >
                             <s.icon size={15} className={selectedService === s.value ? "text-[#0052CC]" : "text-[#97A0AF]"} />
                             <span className="leading-tight">{s.label}</span>
@@ -145,7 +144,7 @@ export default function ContactPage() {
                     <div className="grid sm:grid-cols-2 gap-5 mb-5">
                       <div>
                         <label htmlFor="name" className="label-ads">Full Name <span className="text-[#DE350B]">*</span></label>
-                        <input id="name" name="name" type="text" required autoComplete="name" placeholder="John Smith" className="input-ads" value={formData.name} onChange={handleChange} />
+                        <input id="name" name="name" type="text" required autoComplete="name" placeholder="Abel Tesfaye" className="input-ads" value={formData.name} onChange={handleChange} />
                       </div>
                       <div>
                         <label htmlFor="company" className="label-ads">Company <span className="text-[#DE350B]">*</span></label>
@@ -157,7 +156,7 @@ export default function ContactPage() {
                     <div className="grid sm:grid-cols-2 gap-5 mb-5">
                       <div>
                         <label htmlFor="country" className="label-ads">Country <span className="text-[#DE350B]">*</span></label>
-                        <input id="country" name="country" type="text" required autoComplete="country-name" placeholder="United States" className="input-ads" value={formData.country} onChange={handleChange} />
+                        <input id="country" name="country" type="text" required autoComplete="country-name" placeholder="Ethiopia" className="input-ads" value={formData.country} onChange={handleChange} />
                       </div>
                       <div>
                         <label htmlFor="email" className="label-ads">Business Email <span className="text-[#DE350B]">*</span></label>
@@ -169,7 +168,7 @@ export default function ContactPage() {
                     <div className="grid sm:grid-cols-2 gap-5 mb-5">
                       <div>
                         <label htmlFor="phone" className="label-ads">Phone Number</label>
-                        <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+1 (555) 000-0000" className="input-ads" value={formData.phone} onChange={handleChange} />
+                        <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+251 911-362-741" className="input-ads" value={formData.phone} onChange={handleChange} />
                       </div>
                       <div>
                         <label htmlFor="subject" className="label-ads">Subject <span className="text-[#DE350B]">*</span></label>
@@ -241,8 +240,8 @@ export default function ContactPage() {
                       <Phone size={15} className="text-[#0052CC] group-hover:text-white transition-colors" />
                     </div>
                     <div>
-                      <p className="text-xs text-[#97A0AF] font-medium">Global HQ (New York)</p>
-                      <p className="text-sm font-semibold text-[#172B4D] group-hover:text-[#0052CC] transition-colors">+1 (212) 555-0100</p>
+                      <p className="text-xs text-[#97A0AF] font-medium">Global HQ (Addis Ababa)</p>
+                      <p className="text-sm font-semibold text-[#172B4D] group-hover:text-[#0052CC] transition-colors">(+251) 911-362-741</p>
                     </div>
                   </a>
                   <a href="mailto:info@yatbusinessgroup.com" className="flex items-center gap-3 group">
@@ -251,7 +250,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs text-[#97A0AF] font-medium">General Enquiries</p>
-                      <p className="text-sm font-semibold text-[#172B4D] group-hover:text-[#0052CC] transition-colors break-all">info@yatbusinessgroup.com</p>
+                      <p className="text-sm font-semibold text-[#172B4D] group-hover:text-[#0052CC] transition-colors break-all">info@yat-m.com</p>
                     </div>
                   </a>
                   <div className="flex items-center gap-3">
@@ -318,7 +317,7 @@ export default function ContactPage() {
               {/* RFQ callout */}
               <div id="rfq" className="scroll-mt-24 rounded-lg bg-linear-to-br from-[#091E42] to-[#0052CC] p-6 text-white">
                 <Globe size={28} className="text-white/30 mb-3" />
-                <h3 className="font-display font-bold text-lg mb-2">Request for Quotation</h3>
+                <h3 className="font-display font-bold text-lg mb-2" style={{ color: "#ffffff" }}>Request for Quotation</h3>
                 <p className="text-white/65 text-sm mb-4 leading-relaxed">
                   Need a formal quote? Use the contact form and select your service. Include cargo details, origin, destination, and timeline for the most accurate quote.
                 </p>
