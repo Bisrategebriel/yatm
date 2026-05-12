@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "YAT Business Group Terms of Service — the terms governing use of our website and trade services, including disclaimers, limitation of liability, and governing law.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/legal/terms" },
+  alternates: { canonical: "https://www.yat-m.com/legal/terms" },
   robots: { index: true, follow: false },
 };
 
@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "8. Governing Law and Jurisdiction",
-    content: "These Terms of Service are governed by and construed in accordance with the laws of the State of New York, United States of America, without regard to its conflict of law provisions. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of New York County, New York, USA. If you are a consumer in the EU or UK, you may also have rights under the mandatory consumer protection laws of your country of residence.",
+    content: "These Terms of Service are governed by and construed in accordance with the laws of the Federal Democratic Republic of Ethiopia, without regard to its conflict of law provisions. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Addis Ababa, Ethiopia.",
   },
   {
     title: "9. Changes to These Terms",
@@ -47,7 +47,7 @@ const sections = [
   },
   {
     title: "10. Contact",
-    content: "For questions about these Terms of Service, please contact us at: legal@yatbusinessgroup.com, or write to: Legal Department, YAT Business Group, 1200 Trade Tower, Financial District, New York, NY 10004, USA.",
+    content: "For questions about these Terms of Service, please contact us at: legal@yat-m.com, or write to: Legal Department, YAT Business Group, Kirkos Sub-city, Woreda 07, Addis Ababa, Ethiopia.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function TermsPage() {
             <span>Terms of Service</span>
           </nav>
           <h1 className="font-display font-extrabold text-white mb-4"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Terms of Service
           </h1>
@@ -74,7 +74,7 @@ export default function TermsPage() {
         <div className="container-narrow">
           <div className="p-5 rounded-[8px] bg-[#FFFAE6] border border-[#FFE380] mb-10">
             <p className="text-sm text-[#344563] leading-relaxed">
-              <strong>Please read these terms carefully</strong> before using our website or engaging our services. By using yatbusinessgroup.com, you agree to these terms.
+              <strong>Please read these terms carefully</strong> before using our website or engaging our services. By using yat-m.com, you agree to these terms.
             </p>
           </div>
 
