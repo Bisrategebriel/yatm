@@ -77,7 +77,7 @@ export default function ExportPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-white btn-primary-lg">Request a Quote <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Explore Export Services</Link>
+            <Link href="/services/export#global-export-reach" className="btn btn-ghost-white btn-primary-lg">Explore Export Destinations</Link>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function ExportPage() {
         </div>
       </section>
 
-      <section className="section-py bg-[#F4F5F7]">
+      <section className="section-py bg-[#F4F5F7]" id="global-export-reach">
         <div className="container-site">
           <div className="flex flex-col gap-16">
             {/* Map on top - Full Width */}
