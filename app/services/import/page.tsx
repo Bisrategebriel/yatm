@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Package, CheckCircle2, ArrowRight, Globe, ShieldCheck, Clock, FileText, Search, Truck } from "lucide-react";
+import { Package, CheckCircle2, ArrowRight, ShieldCheck, FileText, Search, Truck, ContactIcon, FormIcon } from "lucide-react";
+import ImageSlider from "@/components/ImageSlider";
 
 export const metadata: Metadata = {
   title: "Import Services",
@@ -10,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 const process = [
-  { step: "01", icon: Search, title: "Supplier Identification", desc: "We source and vet reliable suppliers in your target markets, conducting due diligence and quality assessments before any commitment." },
-  { step: "02", icon: FileText, title: "Documentation Preparation", desc: "Commercial invoices, packing lists, certificates of origin, import licences — every document prepared accurately and on time." },
-  { step: "03", icon: ShieldCheck, title: "Compliance Review", desc: "HS code classification, restricted goods screening, anti-dumping checks, and sanctions compliance before shipment departs." },
-  { step: "04", icon: Truck, title: "Freight & Logistics", desc: "Coordinating sea, air, or multimodal shipments with our carrier network for optimal cost and transit times." },
-  { step: "05", icon: Globe, title: "Customs Clearance", desc: "Our licensed customs brokers manage the full clearance process — duty payments, tariff classifications, and examinations." },
-  { step: "06", icon: Clock, title: "Last-Mile Delivery", desc: "Final delivery to your warehouse, distribution centre, or end destination with real-time tracking throughout." },
+  { step: "01", icon: Search, title: "Product Inquiry & Requirement Analysis", desc: "Understanding the client’s product needs, specifications, quantity, sourcing requirements, and delivery expectations." },
+  { step: "02", icon: FileText, title: "International Supplier Sourcing", desc: "Identifying and connecting with trusted international manufacturers and suppliers through YAT’s global business network." },
+  { step: "03", icon: ShieldCheck, title: "Quotation & Procurement Agreement", desc: "Preparing quotations, confirming pricing, negotiating terms, and finalizing procurement and supply agreements." },
+  { step: "04", icon: Truck, title: "Shipping & Freight Coordination", desc: "Managing cargo booking, shipping arrangements, freight forwarding, and preparation of required import documentation." },
+  { step: "05", icon: FormIcon, title: "Customs Clearance & Port Handling", desc: "Handling customs clearing procedures, port operations, cargo inspection, and inland logistics coordination." },
+  { step: "06", icon: ContactIcon, title: "Delivery & Operational Support", desc: "Delivering products to the client’s destination while providing installation guidance, operational support, or training when required." },
 ];
 
 const features = [
@@ -44,6 +45,69 @@ const categories = [
   "FMCG & packaged goods",
 ];
 
+const importSlides = [
+  {
+    id: 1,
+    image: "/images/services/industrial-machinery.png",
+    title: "Industrial Machinery Import",
+    description: "Import of industrial and manufacturing machinery including plastic film machines, extruders, recycling systems, slaughtering equipment, and metal molds for industrial operations."
+  },
+  {
+    id: 2,
+    image: "/images/services/manufacturing-equipment.png",
+    title: "Sewing Machine Supply",
+    description: "Supply and import of industrial and commercial sewing machines including Hanma and Protex machine lines for textile and manufacturing businesses."
+  },
+  {
+    id: 3,
+    image: "/images/services/stationery-materials.png",
+    title: "Stationery & Paper Products Import",
+    description: "Import of paper and non-paper stationery materials for commercial, educational, and operational use."
+  },
+  {
+    id: 4,
+    image: "/images/services/construction-materials.png",
+    title: "Raw Materials & Scrap Import",
+    description: "Import of metal and non-metal scrap materials and other industrial raw materials required for manufacturing and production sectors."
+  },
+  {
+    id: 5,
+    image: "/images/services/manufacturing-equipment.png",
+    title: "Factory Design & Installation Support",
+    description: "Providing factory layout planning, machinery installation coordination, and operational setup support for industrial projects."
+  },
+  {
+    id: 6,
+    image: "/images/services/freight-shipping.png",
+    title: "Freight Forwarding & Shipping",
+    description: "Managing international cargo movement, shipping coordination, container booking, and forwarding operations through trusted logistics networks."
+  },
+  {
+    id: 7,
+    image: "/images/services/customs-clearing.png",
+    title: "Customs Clearing Services",
+    description: "Handling customs documentation, cargo clearance procedures, inspection processes, and compliance requirements for imported goods."
+  },
+  {
+    id: 8,
+    image: "/images/services/freight-shipping.png",
+    title: "Port Handling & Inland Transport",
+    description: "Coordinating cargo unloading, port logistics, warehousing support, and transportation from ports to final destinations."
+  },
+  {
+    id: 9,
+    image: "/images/services/manufacturing-equipment.png",
+    title: "Supplier & Procurement Support",
+    description: "Connecting clients with trusted international suppliers and manufacturers while supporting sourcing, negotiation, and procurement processes."
+  },
+  {
+    id: 10,
+    image: "/images/services/industrial-machinery.png",
+    title: "Technical & Operational Training",
+    description: "Providing operational guidance and training support for imported machinery, industrial systems, and business operations where required."
+  }
+];
+
 export default function ImportPage() {
   return (
     <>
@@ -61,7 +125,7 @@ export default function ImportPage() {
             <span className="section-label section-label-light">Import Services</span>
           </div>
           <h1 className="font-display font-extrabold text-white mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             End-to-End Import<br />Management
           </h1>
@@ -70,7 +134,7 @@ export default function ImportPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-white btn-primary-lg">Request a Quote <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn btn-ghost-white btn-primary-lg">Speak to a Specialist</Link>
+            <Link href="/services/import#full-scope-import-services" className="btn btn-ghost-white btn-primary-lg">Explore Import Services</Link>
           </div>
         </div>
       </div>
@@ -104,32 +168,16 @@ export default function ImportPage() {
       </section>
 
       {/* Features & Categories */}
-      <section className="section-py bg-[#F4F5F7]" aria-label="Import service features">
-        <div className="container-site">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="font-display font-bold text-[#091E42] text-2xl mb-6">Full-Scope Import Services</h2>
-              <div className="grid gap-2">
-                {features.map((f) => (
-                  <div key={f} className="flex items-start gap-3 py-2">
-                    <CheckCircle2 size={16} className="text-[#00875A] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-[#344563]">{f}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h2 className="font-display font-bold text-[#091E42] text-2xl mb-6">Supported Product Categories</h2>
-              <div className="grid gap-3">
-                {categories.map((c) => (
-                  <div key={c} className="flex items-center gap-3 p-3 bg-white rounded-[6px] border border-[#DFE1E6] text-sm text-[#344563] font-medium">
-                    <div className="w-2 h-2 rounded-full bg-[#0052CC] flex-shrink-0" />
-                    {c}
-                  </div>
-                ))}
-              </div>
-            </div>
+      <section className="section-py bg-[#F4F5F7]" aria-label="Import service features" id="full-scope-import-services">
+        {/* Slider Gallery */}
+        <div className="container-site mt-4">
+          <div className="text-center mb-8">
+            <h2 className="font-display font-bold text-[#091E42] mt-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              Full-Scope Import Services
+            </h2>
+            <p className="text-[#6B778C] text-sm">Visualizing our specialized product import and procurement expertise.</p>
           </div>
+          <ImageSlider slides={importSlides} />
         </div>
       </section>
 
@@ -138,7 +186,7 @@ export default function ImportPage() {
         <div className="container-site">
           <div className="cta-banner text-center">
             <div className="relative z-10">
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "#FFFFFF" }}>
                 Ready to Simplify Your Imports?
               </h2>
               <p className="text-white/65 mb-7 max-w-md mx-auto">Tell us what you need to import and where from. We'll handle the rest.</p>
