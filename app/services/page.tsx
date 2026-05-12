@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Package, ArrowLeftRight, Truck, ShieldCheck, BarChart3,
-  ArrowRight, CheckCircle2, Globe
+  ArrowRight, CheckCircle2, Globe, Factory
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore YAT Business Group's full suite of global trade services: import, export, freight & logistics, trade compliance, and strategic consulting.",
-  alternates: { canonical: "https://www.yatbusinessgroup.com/services" },
+    "Explore YAT Business Group's full suite of global trade services: import, export, freight & logistics, manufacturing, and strategic consulting.",
+  alternates: { canonical: "https://www.yat-m.com/services" },
 };
 
 const services = [
@@ -19,13 +19,12 @@ const services = [
     title: "Import Services",
     color: "#0052CC",
     bgColor: "#DEEBFF",
-    desc: "End-to-end import management from supplier identification and purchase order management to customs clearance, duty optimisation, and final delivery.",
+    desc: "Source industrial machinery, manufacturing equipment, stationery materials, and specialized products through trusted international supplier networks.",
     features: [
-      "Supplier sourcing & vetting", "Purchase order management", "HS code classification",
-      "Import duty optimisation", "Customs clearance & brokerage", "Last-mile delivery coordination",
-      "Import documentation (COO, packing lists, invoices)", "Restricted/prohibited goods advisory",
+      "Industrial machinery import", "Supplier sourcing & procurement", "Customs clearance",
+      "Port handling & transportation",
     ],
-    callout: "Serving 40+ source markets across Asia, Europe, and the Americas",
+    callout: "Serving 40+ source markets across the globe.",
   },
   {
     href: "/services/export",
@@ -33,12 +32,10 @@ const services = [
     title: "Export Services",
     color: "#00875A",
     bgColor: "#E3FCEF",
-    desc: "Navigate destination markets with confidence. We handle export licences, documentation, packaging requirements, and compliance for every destination.",
+    desc: "Expand into international markets with YAT’s export solutions for Ethiopian agricultural products including coffee, sesame, pulses, and oil seeds.",
     features: [
-      "Export licensing & permits", "Certificate of origin (COO) processing",
-      "Export documentation package", "Destination market compliance",
-      "Packaging & labelling standards", "Export credit insurance coordination",
-      "Denied party screening", "Trade sanctions compliance",
+      "Coffee export (Sidama, Yirgacheffe, Kochere)", "Sesame & oil seeds export",
+      "International buyer connections", "Export documentation support",
     ],
     callout: "Active export corridors to 35+ destination markets",
   },
@@ -48,26 +45,23 @@ const services = [
     title: "Freight & Logistics",
     color: "#FF8B00",
     bgColor: "#FFF0B3",
-    desc: "Multimodal freight solutions by sea, air, and road — with real-time visibility, warehousing, and integrated last-mile options for any shipment size.",
+    desc: "Reliable shipping, forwarding, and logistics solutions designed to simplify global trade operations for businesses and manufacturers.",
     features: [
-      "Ocean freight (FCL & LCL)", "Air freight (standard & express)",
-      "Road & rail freight", "Multimodal shipments", "Real-time cargo tracking",
-      "Warehousing & distribution", "Cold chain logistics", "Project cargo & heavy lifts",
+      "Shipping & freight forwarding", "Customs clearing services",
+      "Port logistics coordination", "Inland transportation support",
     ],
-    callout: "500+ port connections across 6 continents",
+    callout: "15+ port connections across 4 continents",
   },
   {
-    href: "/services/compliance",
-    icon: ShieldCheck,
-    title: "Trade Compliance",
+    href: "/services/manufacturing",
+    icon: Factory,
+    title: "Manufacturing",
     color: "#0747A6",
     bgColor: "#DEEBFF",
-    desc: "Protect your business from regulatory risk. Our compliance specialists manage sanctions screening, tariff engineering, and audit-ready documentation.",
+    desc: "Manufacturing support and industrial product solutions with expertise in plastic products, tyre production, and factory systems.",
     features: [
-      "Customs compliance audits", "Sanctions & denied-party screening",
-      "Tariff classification & engineering", "Free trade agreement utilisation",
-      "Import/export controls advisory", "Anti-dumping duty management",
-      "Regulatory change monitoring", "Compliance training & workshops",
+      "Plastic product manufacturing", "Tyre manufacturing",
+      "Factory setup & installation", "Industrial machine supply",
     ],
     callout: "Zero compliance penalties across 3,000+ managed shipments",
   },
@@ -77,12 +71,10 @@ const services = [
     title: "Consulting & Advisory",
     color: "#00B8D9",
     bgColor: "#E6FCFF",
-    desc: "Strategic trade intelligence to help you enter new markets, optimise your supply chain costs, and build a resilient global trade operation.",
+    desc: "Strategic international business consultancy and operational support to help businesses grow in manufacturing, trade, and logistics sectors.",
     features: [
-      "Market entry feasibility studies", "Supply chain cost optimisation",
-      "Trade route analysis", "Tariff & duty benchmarking",
-      "Vendor diversification strategy", "Trade finance advisory",
-      "Risk & disruption modelling", "Custom trade reporting & dashboards",
+      "International trade consultancy", "Operational training",
+      "Logistics strategy support", "Market expansion guidance",
     ],
     callout: "Average 18% cost reduction achieved for consulting clients",
   },
@@ -101,7 +93,7 @@ export default function ServicesPage() {
           </nav>
           <span className="section-label section-label-light mb-4">What We Offer</span>
           <h1 className="font-display font-extrabold text-white mt-4 mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: "1.1", color: "#FFFFFF" }}
           >
             Comprehensive Global<br />Trade Solutions
           </h1>
@@ -175,7 +167,7 @@ export default function ServicesPage() {
           <div className="cta-banner text-center">
             <div className="relative z-10">
               <Globe size={36} className="text-white/30 mx-auto mb-4" />
-              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+              <h2 className="font-display font-bold text-white mb-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#FFFFFF" }}>
                 Not Sure Which Service You Need?
               </h2>
               <p className="text-white/65 mb-7 max-w-lg mx-auto">
