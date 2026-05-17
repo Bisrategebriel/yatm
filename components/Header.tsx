@@ -6,6 +6,7 @@ import {
   Menu, X, ChevronDown, Globe, Package, ArrowLeftRight,
   Truck, ShieldCheck, BarChart3, Phone, Factory
 } from "lucide-react";
+import LanguageSwitcher, { languages, handleLanguageChange } from "@/components/LanguageSwitcher";
 
 const services = [
   { href: "/services/import", label: "Import Services", icon: Package, desc: "Global sourcing & import management" },
@@ -163,7 +164,8 @@ export default function Header() {
                 <span>(+251) 911-362-741</span>
               </Link>
 
-              <div className="hidden lg:flex">
+              <div className="hidden lg:flex items-center gap-2">
+                <LanguageSwitcher scrolled={scrolled} />
                 <Link href="/contact" className="btn btn-primary text-sm px-5 py-2.5">
                   Contact Us
                 </Link>
@@ -213,6 +215,24 @@ export default function Header() {
                     {s.label}
                   </Link>
                 ))}
+              </div>
+
+              <div className="mt-2 pt-4 border-t border-[#EBECF0]">
+                <p className="px-4 text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-[#6B778C] mb-2">Language</p>
+                <div className="flex flex-wrap gap-2 px-4 mb-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        handleLanguageChange(lang.code);
+                        setMobileOpen(false);
+                      }}
+                      className="px-3 py-1.5 rounded-[6px] text-xs font-semibold text-[#253858] bg-[#F4F5F7] border border-[#DFE1E6] hover:border-[#4C9AFF] hover:bg-[#DEEBFF] hover:text-[#0052CC] transition-colors"
+                    >
+                      {lang.label.split(" ")[0]}
+                    </button>
+                  ))}
+                </div>
               </div>
             </nav>
 

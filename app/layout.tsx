@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TranslateWidget from "@/components/TranslateWidget";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -130,6 +131,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <Header />
+        <TranslateWidget />
         <main id="main-content" className="flex-1">
           {children}
         </main>

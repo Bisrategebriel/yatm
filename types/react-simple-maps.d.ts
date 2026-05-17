@@ -35,6 +35,8 @@ declare module "react-simple-maps" {
     fill?: string;
     stroke?: string;
     strokeWidth?: number;
+    strokeOpacity?: number;
+    fillOpacity?: number;
   }
 
   export interface MarkerProps {
@@ -53,6 +55,9 @@ declare module "react-simple-maps" {
       pressed?: React.CSSProperties;
     };
     className?: string;
+    fill?: string;
+    stroke?: string;
+    strokeWidth?: number;
   }
 
   export interface LineProps {
@@ -61,6 +66,8 @@ declare module "react-simple-maps" {
     stroke?: string;
     strokeWidth?: number;
     strokeLinecap?: "butt" | "round" | "square" | "inherit";
+    strokeDasharray?: string | number;
+    strokeOpacity?: number;
     className?: string;
     style?: React.CSSProperties;
   }

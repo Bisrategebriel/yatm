@@ -634,3 +634,22 @@ h6 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ── Google Translate Overrides ── */
+body {
+  top: 0 !important;
+}
+
+.skiptranslate > iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
